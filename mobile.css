@@ -1,0 +1,29 @@
+.nav-btn {
+    display: none;
+}
+.nav-icon {
+    font-size: 1.5em;
+    display: inline-block;
+}
+
+main.links {
+    position: relative;
+    max-height: 66vh;
+	overflow-x: scroll;
+    background: no-repeat center/cover linear-gradient(to bottom, transparent, hsla(0, 0%, 0%, 0.03), transparent);
+    flex-wrap: nowrap;
+}
+.link {
+    flex-shrink: 0;
+    width: 70%; height: 100%;
+    padding-bottom: 1.5em;
+}
+.link:first-of-type {
+    margin-left: 15%;
+}
+.link-description {
+    display: block;
+    text-align: left;
+    max-width: 80%;
+    margin: 0 auto;
+}

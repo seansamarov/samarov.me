@@ -1,0 +1,57 @@
+{
+  "dinosaurearthsociety.com":{
+    "name":"Dinosaur Earth Society",
+    "abbreviation":"des",
+    "url":"https://dinosaurearthsociety.com",
+    "image":"https://dinosaurearthsociety.com/img/preview.webp",
+    "description":"The Dinosaur Earth Society is an online community built around a satire of the Flat Earth Society.",
+    "services":[
+      "Web Development",
+      "Web Hosting Suite"
+    ]
+  },
+  "motherearthcomics.com":{
+    "name":"Gaia Comics",
+    "abbreviation":"gaia",
+    "url":"https://motherearthcomics.com",
+    "image":"https://motherearthcomics.com/img/bg.720.jpg",
+    "description":"The official website of Gaia Comics, an independent cosmic comic artist.",
+    "services":[
+      "Web Development",
+      "Twitter Bot Development",
+      "Web Hosting Suite"
+    ]
+  },
+  "avalanchebrook.com":{
+    "name":"Avalanche Brook Design",
+    "abbreviation":"avalanchebrook",
+    "url":"https://avalanchebrook.com",
+    "image":"null",
+    "description":"Avalanche Brook Design is a startup iOS development company.",
+    "services":[
+      "Web Development",
+      "Web Hosting Suite"
+    ]
+  },
+  "lyhme.net":{
+    "name":"Lyhme Community",
+    "abbreviation":"lyhme",
+    "url":"https://lyhme.net",
+    "image":"null",
+    "description":"The official website of LYHMECommunity, an Unturned game server network.",
+    "services":[
+      "Web Development"
+    ]
+  },
+  "thenewhaven.net":{
+    "name":"New Haven",
+    "abbreviation":"newhaven",
+    "url":"https://thenewhaven.net",
+    "image":"null",
+    "description":"The New Haven is an effort to revive some of the greatest classic gaming experiences of the past 15 years.",
+    "services":[
+      "Game Hosting",
+      "Web Hosting"
+    ]
+  }
+}

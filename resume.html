@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sean Samarov | Resume</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    :root {
+      scroll-behavior: smooth;
+      box-sizing: border-box;
+      font-size: 1.1rem;
+      line-height: 1.3;
+      font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+      color:hsla(0, 0%, 0%, 0.9);
+    }
+    body {
+      margin: 0; padding: 0;
+      background-color:hsl(0, 0%, 98%)
+    }
+    section,header {
+      padding: 8px 5vw;
+    }
+    h1,#contact {
+      max-width: 40vw;
+    }
+    h1 {
+      display: inline-block;
+      height: 1.1em;
+      padding-left: 0.75ch;
+      font-weight: 100;
+      border-left: 0.25ch solid hsla(0, 0%, 0%, 0.6);
+      border-image: linear-gradient(to top,  hsla(219, 79%, 66%, 0.8) 0%, transparent 95%) 1;
+    }
+    #contact {
+      float: right;
+      text-align: right;
+    }
+    #introduction {
+      clear: both;
+      max-width: 800px;
+    }
+    h2 {
+      margin-bottom: 0.1em;
+      font-weight: 600;
+    }
+    h2+p {
+      margin: 0;
+      color: hsla(0, 0%, 0%, 0.6);
+      font-size: 0.8em;
+    }
+    h3 {
+      font-weight: 400;
+    }
+    hr {
+      margin: 0 16px;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    ol>li {
+      margin-left: clamp(0, 2ch, 2ch);
+    }
+    @media print {
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      li a::after {
+        content: " ("attr(href)")";
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Sean Samarov</h1>
+      <p id="contact">
+        <a href="https://samarov.me">www.samarov.me</a>
+        <br>
+        <a href="mailto:sean@samarov.me?subject=Send Sean a Message&body=Hey, thanks for reaching out! I'll get back to you as soon as possible.">sean@samarov.me</a>
+        <br>
+        <a href="tel:+19787273294">(978)-727-3294</a>
+        <br>
+      </p>
+      <p id="introduction">Skilled and enthusiastic web technologist with 4+ years freelance experience seeking to create compelling visual designs and develop creative web-based solutions that work for users. A quick learner, enjoys learning tools front-to-back and applying new skills and knowledge in crafty and interesting ways.</p>
+    </header>
+    <main>
+      <section id="experience">
+        <ul>
+          <li id="ineptitech">
+            <h2>Ineptitech</h2>
+            <p>2020 - current</p>
+            <h3>Web Developer and System Administrator</h3>
+            <p>Led several team and solo development projects for clients, utilizing Apache, Nginx, PHP, Python, HTML/CSS/JS and MySQL, and provided managed hosting services on a dedicated server using Proxmox VE, WHMCS, Plesk and Pterodactyl. Acted as point of contact for clients during development and provided technical support via support tickets.</p>
+            <ol class="entries">
+              <li class="project nginx mysql php html css js">Designed and developed <a href="https://dinosaurearthsociety.com" target="_blank" rel="noopener noreferrer">a website for a social media influencer</a> using HTML5 Canvas and ModelViewer.</li>
+              <li class="project nginx php html css js">Designed and developed <a href="https://motherearthcomics.com" target="_blank" rel="noopener noreferrer">a website and web app for Gaia Comics</a>, an online comic artist, using PHP GD and HTML5 Canvas, in addition to <a href="https://twitter.com/theEarthdroid" target="_blank" rel="noopener noreferrer">a Twitter bot</a> using PHP GD and the Twitter API.</li>
+              <li class="project nginx php html css js">Designed and developed <a href="https://avalanchebrook.com">a website for Avalanche Brook Design</a>, a startup iOS development company.<br>Additionally deployed and configured a fault-tolerant network storage solution using Mdadm, Samba and Apcupsd.</li>
+              <li class="project apache mysql php html css js">Renovated and refactored <a href="https://lyhme.net" target="_blank" rel="noreferrer noopener">a website for LYHMECommunity</a>, a game server community, using Bootstrap.</li>
+              <li class="project nginx php html css js">Designed and developed a website for <a href="https://thearchive.xyz" target="_blank" rel="noopener noreferrer">a game server community</a> using the Source Engine Query protocol.<br>Additionally deployed a large game server network using Pterodactyl Game Panel.</li>
+              <li>Audited a <a href="https://tracle.tv/" target="_blank" rel="noopener noreferrer">video streaming service</a> for server security vulnerabilities.</li>
+            </ol>
+          </li>
+          <li id="yougold">
+            <h2>Yougold LLC</h2>
+            <p>2019-2020</p>
+            <h3>Web Developer and System Administrator</h3>
+            <ol class="entries">
+              <li>Planned hardware configuration and budgeting of dedicated bare metal servers.</li>
+              <li>Configured and managed Linux server systems running Debian, Ubuntu, and CentOS.</li>
+              <li class="project nginx python html css js">Prototyped a server management web panel using Bootstrap, jQuery, Flask and Libvirt.</li>
+            </ol>
+          </li>      
+          <li id="pyrrhos">
+            <h2>Pyrrhos Hosting</h2>
+            <p>2017 - 2018</p>
+            <h3>System Administrator and Customer Support</h3>
+            <ol class="entries">
+              <li>Planned infrastructure scaling and budgeting of dedicated bare metal servers.</li>
+              <li>Configured and deployed production servers.</li>
+              <li>Configured billing, automated provisioning, and user management with WHMCS and Pterodactyl Game Panel.</li>
+              <li>Created custom, automated services and service configurations with Docker.</li>
+              <li>Responded to front page live chat with customer, provided support via support tickets.</li>
+            </ol>
+          </li>
+        </ul>
+      </section>
+      <hr>
+      <section id="skills">
+        <h2>Skills</h2>
+        <div id="skills-container">
+          <progress id="linux-server-administration" max="100" value="90"></progress>
+          <label for="linux-server-administration">Linux Server Administration</label>
+          <br>
+          <progress id="programming" max="100" value="65"></progress>
+          <label for="programming">Programming</label>
+          <br>
+          <progress id="web-development" max="100" value="75"></progress>
+          <label for="web-development">Web Development (HTML/CSS)</label>
+          <br>
+          <progress id="ui-ux" max="100" value="70"></progress>
+          <label for="ui-ux">UI/UX Design</label>
+          <br>
+          <progress id="customer-relations" max="100" value="72"></progress>
+          <label for="customer-relations">Customer Relations</label>
+          <br><br>
+        </div>
+      </section>
+      <hr>
+      <section id="education">
+        <h2>Education</h2>
+        <ol class="entries">
+          <li>High School, 2019</li>
+          <li>CompTIA A+ Certification, 2019</li>
+        </ol>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Home of Sean Samarov | Full-Stack Web Developer and Linux System Administrator</title>
+    <!--Favicons-->
+    <link rel="shortcut icon" href="favicons/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--General SEO and embeds-->
+    <meta name="title" content="Portfolio of Sean Samarov">
+    <meta name="description" content="Sean Samarov is a web technologist with a passion for puzzle-solving.">
+    <meta name="keywords" content="Sean Samarov,Shawn Samarov, Sean Samorov, Web Developer,System Administrator,Linux,HTML,CSS,JS">
+    <meta name="author" content="Sean Samarov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--OpenGraph-->
+    <meta property="og:title" content="Portfolio of Sean Samarov">
+    <meta property="og:url" content="https://samarov.me">
+    <meta property="og:description" content="Sean Samarov is a web technologist with a passion for puzzle-solving.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="s.png">
+    <!--Twitter Cards-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Portfolio of Sean Samarov">
+    <meta name="twitter:site" content="@Ineptitech">
+    <meta name="twitter:creator" content="@Ineptitech">
+    <meta name="twitter:description" content="Sean Samarov is a web technologist with a passion for puzzle-solving.">
+    <meta name="twitter:image" content="https://samarov.me/s.png">
+    <!--Stylesheets-->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        font-size: clamp(1rem, 2.5vw, 1.5rem);
+      }
+      html, body, div, span, applet, object, iframe,
+      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+      a, abbr, acronym, address, big, cite, code,
+      del, dfn, img, ins, kbd, q, s, samp,
+      small, strike, strong, sub, sup, tt, var,
+      b, u, i, center,
+      dl, dt, dd, ol, ul, li,
+      fieldset, form, label, legend,
+      table, caption, tbody, tfoot, thead, tr, th, td,
+      article, aside, canvas, details, embed, 
+      figure, figcaption, footer, header, hgroup, 
+      menu, nav, output, ruby, section, summary,
+      time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 1em;
+        font: inherit;
+        font-family: sans-serif;
+        vertical-align: baseline;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+      article, aside, details, figcaption, figure, 
+      footer, header, hgroup, menu, nav, section {
+        display: block;
+      }
+      ol, ul {
+        list-style: none;
+      }
+      body {
+        background-color: hsl(0, 0%, 98%);
+        width: 100%;
+        max-width: 768px;
+        margin: 0 auto;
+      }
+      a:link {
+        color: hsl(219, 79%, 66%);
+      }
+      a:visited {
+        color: hsl(256, 79%, 66%);
+      }
+      a:hover {
+        color: hsl(241, 79%, 60%);
+      }
+      a:active {
+        color: hsl(241, 41%, 50%);
+      }
+      h1 {
+        grid-row: 1 / 3;
+        grid-column: 1 / 4;
+
+        text-align: right;
+        text-shadow: 4px 4px 4px hsla(0,0%,0%,0.3);
+
+        font-size: 2.5em;
+        color: hsla(0,0%,0%,0.9);
+      }
+      h2 {
+        font-size: 1.5em;
+        line-height: 250%;
+        color: hsla(0,0%,0%,0.85);
+      }
+      h3 {
+        font-size: 1.25em;
+        line-height: 200%;
+        color: hsla(0,0%,0%,0.75);
+      }
+      p {
+        line-height: 175%;
+        color: hsla(0,0%,0%,0.7);
+      }
+      h2, .first-name, .last-name, .nav-btn {
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      header {
+        display: flex;
+        flex-flow: row nowrap;
+
+        border-image-source: radial-gradient(#6495ed 70%, transparent 95%);
+        border-image-slice: 1;
+        border-image-repeat: stretch;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+      }
+      model-viewer {
+        flex-basis: 34%;
+        order: 1;
+        height: auto;
+        --poster-color: transparent;
+      }
+      .header-content {
+        flex-basis: 66%;
+
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+        grid-template-rows: repeat(3, 33%);
+      }
+      .first-name, .last-name {
+        font-weight: 100;
+        opacity: 0;
+        animation: slide 1s ease 0.1s 1 normal forwards;
+      }
+      .last-name {
+        animation-delay: 0.3s;
+      }
+      @keyframes slide {
+        0% {
+          opacity: 0;
+          margin-right: -70%;
+        }
+        40% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+          margin-right: 0;
+        }
+      }
+
+      nav {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-end: span 4;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        margin: 1ch 0;
+      }
+      .nav-btn {
+        width: 9ch;
+        padding: 0.5em;
+        margin: 0 2px;
+        font-size: 1em;
+
+        transition: 0.2s;
+        border-width: 1px;
+        border-style: solid;
+        background-color: #fff;
+      }
+      .nav-btn:hover {
+        cursor: pointer;
+      }
+      .about-btn {
+        border-color: cornflowerblue;
+      }
+      .resume-btn {
+        border-color: indianred;
+      }
+      .contact-btn {
+        border-color: plum;
+      }
+      .nav-btn {
+        margin: 0 2px;
+      }
+      /* Mobile icons */
+      .nav-icon {
+        display: none;
+      }
+
+
+      main.links {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        padding-top: 1em;
+      }
+      .link {
+        width: 30%;
+        margin: 1.66%;
+        text-decoration: none;
+        text-align: center;
+      }
+      .link-icon {
+        width: 50%;
+        max-height: 50%;
+      }
+      .link-label {
+        text-decoration: underline;
+      }
+      .link-description {
+        display: none;
+        text-decoration: none;
+      }
+      #about {
+        padding: 1.6em;
+      }
+
+      footer {
+        margin-top: 3em;
+        text-align: center;
+      }
+      .social {
+        display: inline-block;
+        line-height: 3em;
+        margin: 0 4px;
+      }
+      .social i {
+        color:hsl(0, 0%, 30%);
+      }
+    </style>
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 768px) and (orientation: portrait)">
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <h1>
+          <span class="first-name">Sean</span>
+          <br>
+          <span class="last-name">Samarov</span>
+        </h1>
+        <nav>
+          <a href="#about">
+            <button class="nav-btn about-btn">About</button>
+            <i class="nav-icon">&#x2139;</i>
+          </a>
+          <a href="/resume.html">
+            <button class="nav-btn resume-btn">Resume</button>
+            <i class="nav-icon">&#x1f4c4;</i>
+          </a>
+          <a href="mailto:sean@samarov.me?subject=Send Sean a Message&body=Hey, thanks for reaching out! I'll get back to you as soon as possible.">
+            <button class="nav-btn contact-btn">Contact</button>
+            <i class="nav-icon">&#x2709;&#xfe0f;</i>
+          </a>
+        </nav>
+      </div>
+      <model-viewer
+      src="s.glb"
+      alt="Sean Samarov Logo"
+      poster="s.png"
+      loading="lazy"
+      auto-rotate
+      camera-controls
+      ></model-viewer>
+    </header>
+    <main class="links">
+      <a href="https://ineptitech.com" target="_blank" rel="noopener noreferrer" class="link">
+        <img src="https://ipsyconh.sirv.com/Images/logos/ineptitech/Logo.png?canvas.width=940&canvas.height=940&canvas.opacity=0" alt="Ineptitech Logo" class="link-icon" />
+        <h2 class="link-label">Ineptitech</h2>
+        <p class="link-description">
+          Ineptitech LLC is my company through which I offer web hosting and freelance development services.
+        </p>
+      </a>
+      <a href="https://null.black" target="_blank" rel="noopener noreferrer" class="link">
+        <img src="https://null.black/logo192.png" alt="null.black Logo" class="link-icon">
+        <h2 class="link-label">Null.black</h2>
+        <p class="link-description">
+          Null.black, the privacy and security company, is dedicated to providing free and open internet access to all.
+        </p>
+      </a>
+      <a href="/blackbirds" target="_blank" rel="noopener noreferrer" class="link">
+        <img src="https://distrokid.imgix.net/http%3A%2F%2Fgather.fandalism.com%2F2500301--F77D48B5-0F75-4B9B-A617376E3323F8E4--1611300444784--blackbirds4.png?fm=jpg&q=75&w=800&s=04976ade43d2631cee962b38f1ab58b5" alt="Blackbirds Album Art" class="link-icon">
+        <h2 class="link-label">Blackbirds</h2>
+        <p class="link-description">
+          My latest single, "Blackbirds", is available everywhere music is found now!
+        </p>
+      </a>
+    </main>
+    <br>
+    <section id="about">
+      <h2>About Sean Samarov</h2>
+      <p>
+        I'm Sean, a full-stack web developer and Linux system administrator.
+      </p>
+      <p>
+        I started my journey into tech at the age of 15, when I received a Chromebook laptop for my birthday. Within a few months I'd installed Ubuntu Linux on it and was using it as a gaming machine. Since then, I've continued to pursue all aspects of system administration.
+      </p>
+      <p>
+        Within a few years, I gained an interest in web development, and began making basic websites for friends and personal projects. This soon became a primary interest of mine, as it satisfied both my technical interest, as well as my more artistic side. This, along with my system administration experience, enable me to offer freelance development, hosting and IT consulting services through my company, <a href="https://ineptitech.com" target="_blank" rel="noopener noreferrer">Ineptitech</a>.
+      </p>
+      <h3>Project Philosophy</h3>
+      <p>
+        You'll find that this website is completely functional without JavaScript, working entirely with HTML5 and CSS3. You'd be hard-pressed to find a website that <em>isn't</em> written in some kind of MVC framework or templating engine, even if it's just a static page. I stand by the idea that less code is better code, and less design is better design. I believe the web would be a better place if that philosophy was more widespread.
+      </p>
+      <h3>Music</h3>
+      <p>
+        I'm also an avid musician, starting piano lessons at the age of 4. More recently I've picked up bass, guitar and singing, in addition to writing and composing. Recently I've collaborated with <a href="#" target="_blank" rel="noopener noreferrer">Chaotic Sanity</a> as a writer and vocalist for their upcoming album.
+        <br>
+        <a href="/blackbirds" target="_blank" rel="noopener noreferrer">My new single, 'Blackbirds', is out now everywhere!</a>
+      </p>
+    </section>
+    <footer>
+      <p class="social">&copy; Sean Samarov</p>
+      <a href="/twitter" target="_blank" rel="noopener noreferrer" class="social">
+        <i class="gg-twitter"></i>
+      </a>
+      <a href="/instagram" target="_blank" rel="noopener noreferrer" class="social">
+        <i class="gg-instagram"></i>
+      </a>
+    </footer>
+  </body>
+</html>
