@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "minify": "^7.0.1"
+  }
+}
