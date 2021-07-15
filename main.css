@@ -178,8 +178,7 @@ main.links {
 	text-align: center;
 }
 .link-icon {
-	width: 50%;
-	max-height: 50%;
+	width: 100%;
 }
 .link-label {
 	text-decoration: underline;

@@ -214,21 +214,27 @@
         text-align: center;
       }
 
+      
       /* Main */
-
+      .projects-header {
+        text-indent: 0.75em;
+      }
+      .scroll-indicator {
+        display: none;
+      }
       main.links {
         display: flex;
         flex-flow: row wrap;
         align-items: flex-start;
-        padding-top: 1em;
       }
       .link {
-        width: 30%;
-        margin: 1.66%;
+        width: 33%;
+        padding: 16px;
         text-decoration: none;
+        text-align: center;
       }
       .link-icon {
-        width: 50%;
+        width: 100%;
         max-height: 50%;
       }
       .link-label {
@@ -236,10 +242,10 @@
         text-decoration-thickness: 1px;
       }
       .link-description {
-        text-align: left;
         max-width: 95%;
         font-weight: 100;
         font-size: 0.9em;
+        text-align: left;
       }
       #about {
         padding: 1.6em 0;
@@ -263,6 +269,9 @@
         .nav-btn {
           width: 50%;
         }
+        .projects-header::after {
+          content: " \02192";
+        }
         main.links {
           position: relative;
           max-height: 66vh;
@@ -272,7 +281,7 @@
         }
         .link {
           flex-shrink: 0;
-          width: 70%; height: 100%;
+          width: 80%; height: 100%;
           padding-bottom: 1.5em;
         }
         .link:first-of-type {
@@ -313,7 +322,8 @@
       camera-controls
       ></model-viewer>
     </header>
-    <main class="links">
+    <h2 class="projects-header">My Projects</h2>
+    <main id="projects" class="links">
       <a href="https://ineptitech.com" target="_blank" rel="noopener noreferrer" class="link">
         <img src="https://ipsyconh.sirv.com/Images/logos/ineptitech/Logo.png?canvas.width=940&canvas.height=940&canvas.opacity=0" alt="Ineptitech Logo" class="link-icon" />
         <h2 class="link-label">Ineptitech</h2>
