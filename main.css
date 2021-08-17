@@ -85,10 +85,14 @@ header {
   border-image-repeat: stretch;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  padding: 0 1em 1ch 1em;
+  padding-bottom: 1em;
+}
+model-viewer, h1 {
+  display: inline-block;
 }
 model-viewer {
-  height: auto;
+  height: 5rem;
+  width: 5rem;
   --poster-color: transparent;
 }
 .first-name, .last-name {
@@ -185,9 +189,6 @@ main.links {
   font-weight: 100;
   font-size: 0.9em;
 }
-#about {
-  padding: 5vw;
-}
 @media screen and (max-width: 768px) and (orientation: portrait) {
   model-viewer {
     display: none;
@@ -212,5 +213,8 @@ main.links {
   }
   .link:last-of-type {
     margin-right: 15%;
+  }
+  #about {
+    padding: 5vw;
   }
 }
