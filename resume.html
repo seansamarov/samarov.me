@@ -9,65 +9,75 @@
     :root {
       scroll-behavior: smooth;
       box-sizing: border-box;
-      font-size: 1.1rem;
-      line-height: 1.3;
+      line-height: 1.35;
+      letter-spacing: 0.02em;
       font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
-      color:hsla(0, 0%, 0%, 0.9);
+      color:hsl(0, 0%, 15%);
     }
+    html,
+    body { padding: 2vmax }
     body {
-      margin: 0; padding: 0;
-      background-color:hsl(0, 0%, 98%)
+      max-width: 1280px;
+      margin-left: auto; margin-right: auto;
+      border: 2px solid hsla(219, 79%, 66%, 0.5);
+      background-color:hsl(0, 0%, 98%);
     }
-    section,header {
-      padding: 8px 5vw;
-    }
-    h1,#contact {
-      max-width: 40vw;
-    }
-    h1 {
-      display: inline-block;
-      height: 1.1em;
-      padding-left: 0.75ch;
-      font-weight: 100;
-      border-left: 0.25ch solid hsla(0, 0%, 0%, 0.6);
-      border-image: linear-gradient(to top,  hsla(219, 79%, 66%, 0.8) 0%, transparent 95%) 1;
-    }
-    #contact {
-      float: right;
-      text-align: right;
-    }
-    #introduction {
-      clear: both;
-      max-width: 800px;
-    }
-    h2 {
-      margin-bottom: 0.1em;
-      font-weight: 600;
-    }
-    h2+p {
+    h2,h3 {
       margin: 0;
-      color: hsla(0, 0%, 0%, 0.6);
-      font-size: 0.8em;
+      margin-bottom: 1ch;
     }
-    h3 {
-      font-weight: 400;
+    address {
+      font-style: normal;
     }
     hr {
-      margin: 0 16px;
+      color: hsla(0, 0%, 0%, 0.8);
     }
     ul {
-      list-style-type: none;
+      list-style-type: square;
       padding-left: 0;
     }
+    ul ul { /* LMFAO */
+      padding-left: 1em;
+    }
     li {
-      margin-left: clamp(0, 2ch, 2ch);
+      list-style-position: inside;
+    }
+    .company {
+      list-style: none;
+      padding-left: 0;
+      margin: 0 0 1.5em 0;
+    }
+    #print-btn {
+      position: fixed;
+      top: 0; left: 8px;
+      width: 5em;
+      height: 3em;
+      font-size: 1.25rem;
+      cursor: pointer;
+      background-color: hsl(219, 79%, 75%);
+      border-radius: 0 0 8px 8px;
+      border: none;
+      box-shadow: 2px 3px 4px hsla(0, 0%, 0%, 0.4);
+      transition: 0.25s ease box-shadow;
+    }
+    #print-btn:active {
+      box-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.4);
+    }
+    #skills {
+      page-break-after: always;
     }
     @media print {
+      html {
+        padding: 0;
+      }
+      #print-btn {
+        display: none;
+      }
       a {
         text-decoration: none;
         color: inherit;
       }
-      li a::after {
+      a::after {
         content: " ("attr(href)")";
       }
     }
@@ -75,98 +85,123 @@
   </head>
   <body>
     <header>
-      <h1>Sean Samarov</h1>
-      <p id="contact">
-        <a href="https://samarov.me">www.samarov.me</a>
-        <br>
-        <a href="mailto:sean@samarov.me?subject=Send Sean a Message&body=Hey, thanks for reaching out! I'll get back to you as soon as possible.">sean@samarov.me</a>
-        <br>
-        <a href="tel:+19787273294">(978)-727-3294</a>
-        <br>
-      </p>
-      <p id="introduction">Skilled and enthusiastic web technologist with 4+ years freelance experience seeking to create compelling visual designs and develop creative web-based solutions that work for users. A quick learner, enjoys learning tools front-to-back and applying new skills and knowledge in crafty and interesting ways.</p>
+      <div class="header-container">
+        <h1>Sean Samarov - Web Developer</h1>
+        <address id="contact">
+          <a href="https://samarov.me">Portfolio</a>
+          <br>
+          <a href="mailto:sean@samarov.me">Email</a>
+          <br>
+          <a href="tel:+19787273294">Phone</a>
+          <br>
+          <a href="https://samarov.me/github" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <br>
+          <a href="https://samarov.me/linkedin">LinkedIn</a>
+        </address>
+      </div>
+      <p id="introduction">Skilled and ambitious web technologist with 4+ years freelance and small team experience seeking to create compelling visual designs and develop creative web-based solutions that work for users. A quick learner, enjoys learning tools front-to-back and applying new skills and knowledge in crafty and interesting ways.</p>
     </header>
+    <hr>
     <main>
-      <section id="experience">
+      <section id="skills">
+        <h2>Skills</h2>
         <ul>
-          <li id="null">
-            <h2>null.black Inc.</h2>
-            <p>2021 - current</p>
-            <h3>Frontend Web Developer</h3>
-            <p>Led UI/UX overhaul, design system creation and coordinating design between teams, in addition to remodeling of the company website.</p>
-            <ol class="entries">
-              <li class="project">Created design system for use by marketing, app and web development teams.</li>
-              <li class="project">Led UX workshops and meetings to educate stakeholders and promote design-oriented thinking company-wide.</li>
-              <li class="project">Led development of a new company website using ReactJS, Storybook, and HTML5/CSS3.</li>
-              <li class="project">Coordinated the website-side of user journey with marketing team for promotional campaigns.</li>
-            </ol>
+          <li>
+            <label>
+              Web Development
+              <br>
+              <progress max="100" value="95"></progress>
+            </label>
+            <ul>
+              <li>3+ Years Experience</li>
+              <li>HTML5, CSS3, JS (EMCAScript 9), PHP5+</li>
+            </ul>
+            <br>
           </li>
-          <li id="ineptitech">
-            <h2>Ineptitech LLC</h2>
-            <p>2020 - current</p>
-            <h3>Web Developer and System Administrator</h3>
-            <p>Led several team and solo development projects for clients, utilizing Apache, Nginx, PHP, Python, HTML/CSS/JS and MySQL, and provided managed hosting services on a dedicated server using Proxmox VE, WHMCS, Plesk and Pterodactyl. Acted as point of contact for clients during development and provided technical support via support tickets.</p>
-            <ol class="entries">
-              <li class="project nginx mysql php html css js">Designed and developed <a href="https://dinosaurearthsociety.com" target="_blank" rel="noopener noreferrer">a website for a social media influencer</a> using HTML5 Canvas and Model-Viewer.</li>
-              <!-- <li class="project nginx php html css js">Designed and developed <a href="https://motherearthcomics.com" target="_blank" rel="noopener noreferrer">a website and web app for Gaia Comics</a>, an online comic artist, using PHP GD and HTML5 Canvas, in addition to <a href="https://twitter.com/theEarthdroid" target="_blank" rel="noopener noreferrer">a Twitter bot</a> using PHP GD and the Twitter API.</li> -->
-              <li class="project nginx php html css js">Designed and developed <a href="https://avalanchebrook.com">a website for Avalanche Brook Design</a>, a startup iOS development company.<br>Additionally deployed and configured a fault-tolerant network storage solution using Mdadm, Samba and Apcupsd.</li>
-              <li class="project apache mysql php html css js">Renovated and refactored <a href="https://lyhme.net" target="_blank" rel="noreferrer noopener">a website for LYHMECommunity</a>, a game server community, using Bootstrap 4.</li>
-              <li class="project nginx php html css js">Designed and developed a website for <a href="https://thearchive.xyz" target="_blank" rel="noopener noreferrer">a game server community</a> using the Source Engine Query protocol.<br>Additionally deployed a large game server network using Pterodactyl Game Panel.</li>
-              <li>Audited a <a href="https://tracle.tv/" target="_blank" rel="noopener noreferrer">video streaming service</a> for server security vulnerabilities.</li>
-            </ol>
+          <li>
+            <label>
+              ReactJS
+              <br>
+              <progress max="100" value="86"></progress>
+            </label>
+            <ul>
+              <li>&lt;1 Year Experience</li>
+              <li>React Redux</li>
+              <li>React Router</li>
+            </ul>
+            <br>
           </li>
-          <!-- <li id="yougold">
-            <h2>Yougold LLC</h2>
-            <p>2019-2020</p>
-            <h3>Web Developer and System Administrator</h3>
-            <ol class="entries">
-              <li>Planned hardware configuration and budgeting of dedicated bare metal servers.</li>
-              <li>Configured and managed Linux server systems running Debian, Ubuntu, and CentOS.</li>
-              <li class="project nginx python html css js">Prototyped a server management web panel using Bootstrap, jQuery, Flask and Libvirt.</li>
-            </ol>
-          </li>      
-          <li id="pyrrhos">
-            <h2>Pyrrhos Hosting</h2>
-            <p>2017 - 2018</p>
-            <h3>System Administrator and Customer Support</h3>
-            <ol class="entries">
-              <li>Planned infrastructure scaling and budgeting of dedicated bare metal servers.</li>
-              <li>Configured and deployed production servers.</li>
-              <li>Configured billing, automated provisioning, and user management with WHMCS and Pterodactyl Game Panel.</li>
-              <li>Created custom, automated services and service configurations with Docker.</li>
-              <li>Responded to front page live chat with customer, provided support via support tickets.</li>
-            </ol>
-          </li> --> 
+          <li>
+            <label>
+              UI/UX Design and Research
+              <br>
+              <progress max="100" value="80"></progress>
+            </label>
+            <ul>
+              <li>&lt; 1 Year Experience</li>
+              <li>Tools - Figma, Balsamiq, UsabilityHub, OptimalWorkshop, Maze</li>
+            </ul>
+            <br>
+          </li>
+          <li>
+            <label>
+              Linux System Administration
+              <br>
+              <progress max="100" value="90"></progress>
+            </label>
+            <ul>
+              <li>5+ Years Experience</li>
+              <li>Debian-based distros (Debian 7+, Ubuntu 14+), CentOS 7+</li>
+              <li>Shell Scripting (Bash, Dash)</li>
+            </ul>
+            <br>
+          </li>
         </ul>
       </section>
       <hr>
-      <section id="skills">
-        <h2>Skills</h2>
-        <div id="skills-container">
-          <progress id="linux-server-administration" max="100" value="90"></progress>
-          <label for="linux-server-administration">Linux Server Administration</label>
-          <br>
-          <progress id="programming" max="100" value="72"></progress>
-          <label for="programming">Programming</label>
-          <br>
-          <progress id="web-development" max="100" value="75"></progress>
-          <label for="web-development">Web Development (HTML/CSS)</label>
-          <br>
-          <progress id="ui-ux" max="100" value="65"></progress>
-          <label for="ui-ux">UI/UX Design</label>
-          <br>
-          <progress id="customer-relations" max="100" value="72"></progress>
-          <label for="customer-relations">Customer Relations</label>
-          <br><br>
-        </div>
+      <section id="experience">
+        <ul>
+          <li id="nulldotblack" class="company">
+            <h2>null.black Inc.</h2>
+            <h3>Frontend Web Developer and Designer</h3>
+            <p>Led UI/UX overhaul, design system creation and coordinating design between teams, in addition to remodeling of the company website.</p>
+            <ol>
+              <li>Led UX workshops to educate stakeholders and promote design-oriented thinking company-wide.</li>
+              <li>Spearheaded and engaged marketing team in user research efforts, including user interviews AND usability testing.</li>
+              <li>Created design system and established a documented design process for use by marketing, app and web development teams.</li>
+              <li>Led development of <a href="https://null.black" target="_blank" rel="noopener noreferrer">a new company website</a> using ReactJS, Storybook UI, and HTML5/CSS3.</li>
+              <li>Coordinated the website-side of user journey with marketing team for promotional campaigns.</li>
+            </ol>
+          </li>
+          <li id="ineptitech" class="company">
+            <h2>Ineptitech LLC</h2>
+            <h3>Web Developer and System Administrator</h3>
+            <p>Completed contract web development projects and provided managed hosting services. Acted as point of contact for clients during development and provided technical support via support tickets.</p>
+            <ol>
+              <li class="nginx mysql php html css js">Designed and developed <a href="https://dinosaurearthsociety.com" target="_blank" rel="noopener noreferrer">a website for Dinosaur Earth Society</a>, a parody personality and social media influencer, using HTML5 Canvas and Model-Viewer.</li>
+              <li class="nginx php html css js">Designed and developed <a href="https://motherearthcomics.com" target="_blank" rel="noopener noreferrer">a website and web app for Gaia Comics</a>, a digital comic artist and social media influencer, using PHP GD and HTML5 Canvas, in addition to <a href="https://twitter.com/theEarthdroid" target="_blank" rel="noopener noreferrer">a Twitter bot</a> using PHP and the Twitter API.</li>
+              <li class="nginx php html css js">Designed and developed <a href="https://avalanchebrook.com">a website for Avalanche Brook Design</a>, a startup iOS development company.<br>Additionally deployed and configured a fault-tolerant network storage solution using Mdadm, Samba and Apcupsd.</li>
+              <!-- <li class="apache mysql php html css js">Renovated and refactored <a href="https://lyhme.net" target="_blank" rel="noreferrer noopener">a website for LYHMECommunity</a>, a game server community, using Bootstrap 4.</li> -->
+              <!-- <li class="nginx php html css js">Designed and developed a website for <a href="https://thearchive.xyz" target="_blank" rel="noopener noreferrer">a game server community</a> using the Source Engine Query protocol.<br>Additionally deployed a large game server network using Pterodactyl Game Panel.</li> -->
+              <!-- <li>Audited a <a href="https://tracle.tv/" target="_blank" rel="noopener noreferrer">video streaming service</a> for server security vulnerabilities.</li> -->
+            </ol>
+          </li>
+        </ul>
       </section>
       <hr>
       <section id="education">
         <h2>Education/Certifications</h2>
-        <ol class="entries">
-          <li>CompTIA A+ Certification, 2019</li>
-        </ol>
+        <ul>
+          <li>CompTIA A+ Certification</li>
+        </ul>
       </section>
     </main>
+    <script>
+      const btn = document.createElement("button");
+      document.body.appendChild(btn);
+      btn.id = "print-btn";
+      btn.innerText = "Print";
+      btn.addEventListener("click", ()=>{window.print()});
+    </script>
   </body>
 </html>
