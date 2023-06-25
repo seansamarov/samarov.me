@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Moshpit | Sean Samarov - Musician, Web Developer, IT Wizard</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        const QUOTES = [   
+        "If you're with the fire department, come back with a warrant. - Peter Natali",
+        "...it is only when a man goes out into the world with the thought that there are heroisms all round him, and with the desire all alive in his heart to follow any which may come within sight of him, that he breaks away... from the life he knows, and ventures forth into the wonderful mystic twilight land where lie the great adventures and the great rewards. - Arthur Conan Doyle",
+        "Everything either is or is not a potato. - Unknown",
+        ];
+        const QUOTE = QUOTES[Math.floor(Math.random() * QUOTES.length)];
+        console.log(QUOTE);
+    </script>
+</head>
+<body>
+    <header class="body-text">
+        <h1>
+            <span id="intro" class="text">What's poppin, my name is</span>
+            <br>
+            Sean Samarov
+        </h1>
+        <a href="/mydecember" target="_blank" rel="noopener noreferrer">Stream my cover of 'My December' by Linkin Park on all platforms now!</a>
+        <p id="quote"></p>
+    </header>
+    <main>
+        <section id="music">
+            <div class="body-text">
+                <h2>Music</h2>
+                <p>From a young age, I showed a inclination for music. I started piano lessons at age 4, and ever since music has been a huge part of my life. I quickly grew a taste for other genres, and have since created my own musical aesthetic, combining the subtle, dramatic and moving sound of classical music with the melodic catharsis and power of punk, rock and metal music.</p>
+    
+                <p>I started singing in 2015, playing bass in 2019 and guitar in 2021. The saying is true - once you’ve learned piano, you can learn any instrument. My musical background has afforded me a lifelong hobby and occupation. For that, I’m incredibly fortunate and very grateful.</p>
+                    
+                <p>I started my band, Off By One, in 2021 when we covered Sum 41’s iconic ballad, Pieces. We established our distinct cozy indie sound and have expanded into countless genres since.</p>
+            </div>
+            <div class="tiles">
+                <figure class="tile"></figure>
+                <figure class="tile"></figure>
+                <figure class="tile"></figure>
+                <figure class="tile"></figure>
+                <figure class="tile"></figure>
+                <figure class="tile"></figure>
+                <figure class="tile"></figure>
+                <figure class="tile"></figure>
+                <figure class="tile"></figure>
+            </div>
+        </section>
+        <section id="3d-art">
+            <div class="body-text">
+                <h2>3D Artwork</h2>
+                <p>While I've always loved visual arts, I’ve never been very good at drawing or painting. Although I do enjoy them, I’ve always struggled to really express my ideas with those tools. The day I discovered the power in uniting my creative and technical inclinations to create 3D artwork, my life changed. I started learning 3D programming with ThreeJS and GLSL and translated that knowledge to create more interesting and innovative shaders. All my artwork is made with Blender. Like every other techie, I hope one day to finish a video game of my own.</p>
+            </div>
+        </section>
+        <section id="web-dev">
+            <div class="body-text">
+                <h2>Web Development</h2>
+                <p>Web development (primarily front-end) is yet another area where I find enjoyment in applying both my technical and creative skills. The purely functional nature of UX design and the rigor of the design process are a potent framework to create websites that accomplish their task effectively. That task is simply to address these two questions: Why is the user here, and what do they want?</p>
+                <br>
+                <p>The advent of WebGL and other 3D technologies for the web has massively expanded the creative possibilities on the web, allowing full immersive experiences to be quickly and easily delivered to users through a web browser. </p>
+                <br>
+                <a href="https://ineptitech.com" target="_blank" rel="noopener noreferrer">
+                    <p>My company, through which I do most of my freelance work, can be found here.</p>
+                </a>
+            </div>
+        </section>
+        <section id="sysadmin">
+            <h2>System Administration</h2>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+<script>
+    document.getElementById("quote").innerText = QUOTE;
+</script>
+</html>
