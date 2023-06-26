@@ -22,6 +22,14 @@ footer {
     opacity: 0;
 }
 
+.bg-video {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(50%);
+}
 #quote {
     width: 768px;
     max-width: 100%;
@@ -31,47 +39,52 @@ footer {
 
 section,
 header {
-    height: 90vh;
     background-attachment: scroll;
     background-size: cover;
 }
 header {
+    height: 95vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    
-    video {
-        position: absolute;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        object-fit: cover;
-        z-index: -1;
 
-        filter: brightness(50%);
-    }
-
-    color: white;
+    color: hsla(0, 0%, 100%, 75%);
     h1 {
-        font-size: 8rem;
-        text-shadow: 4px 4px 2px 2px hsla(0, 0%, 0%, 25%);
+        font-size: 5rem;
+        text-shadow: 4px 4px 4px hsla(0, 0%, 0%, 25%);
         span {
             font-size: 1.65rem;
         }
     }
 }
 section {
-    display: flex;
-    flex-flow: row nowrap;
-    flex: 1;
+    display: flex; 
+    flex-flow: row wrap;
+    background-color: hsla(0, 0%, 95%, 70%);
 
-    background-color: hsl(0, 0%, 95%);
+    h2 {
+        font-size: 3rem;
+        margin-bottom: 0.33em;
+    }
 
     .tiles,
     .body-text {
-        width: 50%;
-        height: 100%;
-        min-width: 540px;
-        flex-basis: auto;
+        min-width: 360px;
+        width: 50vmax;
+    }
+    .tiles {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);   
+        grid-template-columns: repeat(3, 1fr); 
+        .tile {
+            aspect-ratio: 1;
+            width: 100%; height: 100%;
+            place-self: stretch;
+            object-fit: cover;
+            &[src=""] {
+                display: none;
+            }
+        }
     }
     #music {
        /* background-image: url(); */
@@ -79,31 +92,26 @@ section {
     #threedee-art {
 
     }
-    &:nth-child(even) .tiles {
-        // Make the positions switch every iteration
-        order: -1;
-    }
-}
-.tiles {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);   
-    grid-template-columns: repeat(3, 1fr);  
-}
-.tile {
-    width: 100%; height: 100%;
-    place-self: stretch;
-    object-fit: cover;
-    &[src=""] {
-        display: none;
+    @media (orientation: landscape) {
+        .tiles,
+        .body-text {
+            height: 100%;
+        }
+        &:nth-child(even) .tiles {
+            // Make the positions switch every iteration
+            order: -1;
+        }
     }
 }
 
 
 footer {
+    background-color: hsl(0, 0%, 95%);
     text-align: center;
     ul {
         li {
             &:not(:first-child)::before {
+                 /* This selector is a fucking meme lol. It adds back the list item dot for every list item except the first one, so they're only placed in-between. */
                 content: "\025AA\02009";
             }
             display: inline;
@@ -111,5 +119,7 @@ footer {
     }
     hr {
         margin: 0.5em 0;
+        opacity: 0.5;
+        border-bottom-width: 0px;
     }
 }
