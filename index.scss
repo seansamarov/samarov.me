@@ -1,6 +1,10 @@
+$white-bg: hsla(0, 0%, 100%, 90%);
+$white-text: hsla(0, 0%, 100%, 80%);
+$black-text: hsla(0, 0%, 0%, 95%);
+$shadow: hsla(0, 0%, 0%, 25%);
 :root { 
-    font-size: 1.35rem;
-    color: hsla(0, 0%, 0%, 95%);
+    font-size: calc(15px + 0.390625vw);
+    color: $black-text;
 }
 * {
     margin: 0;
@@ -11,9 +15,6 @@
 /* 
     Utility Classes 
 */
-.text {
-    font-size: 1rem;
-}
 .body-text,
 footer {
     padding: 2rem;
@@ -22,6 +23,7 @@ footer {
     opacity: 0;
 }
 
+
 .bg-video {
     position: fixed;
     top: 0; left: 0;
@@ -29,6 +31,9 @@ footer {
     object-fit: cover;
     z-index: -1;
     filter: brightness(50%);
+}
+#cta {
+    margin-top: 2em;
 }
 #quote {
     width: 768px;
@@ -43,34 +48,47 @@ header {
     background-size: cover;
 }
 header {
-    height: 95vh;
+    height: 100vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
 
-    color: hsla(0, 0%, 100%, 75%);
+    color: $white-text;
     h1 {
-        font-size: 5rem;
-        text-shadow: 4px 4px 4px hsla(0, 0%, 0%, 25%);
+        font-size: 4rem;
+        text-shadow: 4px 4px 4px $shadow;
         span {
             font-size: 1.65rem;
+        }
+    }
+    a {
+        color: hsl(200, 33%, 66%);
+        &:hover {
+            color: hsl(200, 33%, 50%);
+        }
+        &:active {
+            color: hsl(220, 33%, 50%);
+        }
+        &:visited {
+            color: hsl(220, 33%, 66%);
         }
     }
 }
 section {
     display: flex; 
     flex-flow: row wrap;
-    background-color: hsla(0, 0%, 95%, 70%);
-
-    h2 {
-        font-size: 3rem;
-        margin-bottom: 0.33em;
-    }
 
     .tiles,
     .body-text {
         min-width: 360px;
         width: 50vmax;
+    }
+    .body-text {
+        background-color: $white-bg;
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 0.33em;
+        }
     }
     .tiles {
         display: grid;
@@ -89,14 +107,10 @@ section {
     #music {
        /* background-image: url(); */
     }
-    #threedee-art {
+    #three-dee-art {
 
     }
     @media (orientation: landscape) {
-        .tiles,
-        .body-text {
-            height: 100%;
-        }
         &:nth-child(even) .tiles {
             // Make the positions switch every iteration
             order: -1;
@@ -104,9 +118,8 @@ section {
     }
 }
 
-
 footer {
-    background-color: hsl(0, 0%, 95%);
+    background-color: $white-bg;
     text-align: center;
     ul {
         li {
@@ -118,8 +131,56 @@ footer {
         }
     }
     hr {
-        margin: 0.5em 0;
+        margin: 1em 0;
         opacity: 0.5;
         border-bottom-width: 0px;
     }
+}
+
+
+/*
+ *
+ * Contact Form
+ *
+ *
+*/
+#contact-form {
+    position: fixed;
+    display: none;
+    flex-flow: row nowrap;
+    justify-content: center; align-items: center;
+    z-index: 1;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    background-color: $shadow;
+
+    &:target {
+        display: flex;
+    }
+    #form-close {
+        position: absolute;
+        top: 1em; right: 1em;
+    }
+}
+fieldset {
+    position: relative;
+    display: inline-block;
+    padding: 1em;
+    background-color: $white-bg;
+}
+label {
+    display: block;
+    margin: 0.33em 0;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    display: inline-block;
+    width: 100%;
+    padding: 0.25em;
+}
+input[type="submit"] {
+    margin-top: 1em;
+    padding: 1em;
 }

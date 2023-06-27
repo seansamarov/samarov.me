@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Moshpit | Sean Samarov - Musician, Web Developer, IT Wizard</title>
+    <title>My Personal Moshpit | Sean Samarov - Musician, Web Developer, IT Wizard, and Aspiring Artist and Game Designer</title>
     <link rel="stylesheet" href="index.scss">
     <script>
         const QUOTES = [   
@@ -24,7 +24,8 @@
             <br>
             Sean Samarov
         </h1>
-        <a href="/mydecember" target="_blank" rel="noopener noreferrer">Stream my cover of 'My December' by Linkin Park on all platforms now!</a>
+        <nav>I do <a href="#music">music</a>, <a href="#three-dee-art">digital art</a>, <a href="web-dev">web development</a> and <a href="#sysadmin">system administration</a>.</nav>
+        <a id="cta" href="/mydecember" target="_blank" rel="noopener noreferrer">Stream my cover of 'My December' by Linkin Park on all platforms now!</a>
         <p id="quote"></p>
     </header>
     <main>
@@ -47,7 +48,7 @@
                 <img class="tile" src="img/IMG_20230211_095604_980.jpg" alt="">
             </div>
         </section>
-        <section id="threedee-art">
+        <section id="three-dee-art">
             <div class="body-text">
                 <h2>3D Artwork</h2>
                 <p>While I've always loved visual arts, I’ve never been very good at drawing or painting. Although I do enjoy them, I’ve always struggled to express my ideas with those tools. The day I discovered the power in uniting my creative and technical inclinations to create 3D artwork, my life changed. I started learning 3D programming with ThreeJS and GLSL and translated that knowledge to create more interesting and innovative shaders. All my artwork is made with Blender. I hope one day to finish a video game of my own.</p>
@@ -66,6 +67,8 @@
                 <p>Web development (primarily front-end) is yet another area where I find enjoyment in applying both my technical and creative skills. The purely functional nature of UX design and the rigor of the design process are a potent framework to create websites that accomplish their task effectively. That task is simply to address these two questions: Why is the user here, and what do they want?</p>
                 <br>
                 <p>The advent of WebGL and other 3D technologies for the web has massively expanded the creative possibilities on the web, allowing full immersive experiences to be quickly and easily delivered to users through a web browser. </p>
+                <br>
+                <p>When I'm not working on extravagant creative projects, my focus is on creating extremely lean and optimized websites/microsites. You'll notice that this website is fully functional without any JavaScript, and just barely uses more memory than an empty new tab. Frameworks and templating engines have their uses, but too many developers focus on the tools first &horbar; and when all you have is a hammer, everything looks like a nail.</p>
                 <br>
                 <a href="https://ineptitech.com" target="_blank" rel="noopener noreferrer">
                     <p>My company, through which I do most of my freelance work, can be found here.</p>
@@ -87,16 +90,18 @@
     </main>
     <footer>
         <ul>
-            <li><a href="/youtube" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-            <li><a href="/instagram" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            <li><a href="/spotify" target="_blank" rel="noopener noreferrer">Spotify</a></li>
-            <li><a href="/applemusic" target="_blank" rel="noopener noreferrer">Apple Music</a></li>
-            <li><a href="/tidal" target="_blank" rel="noopener noreferrer">Tidal</a></li>
-            <li><a href="/contactme" target="_blank" rel="noopener noreferrer">Contact Me</a></li>
+            <li><a href="https://youtube.com/@seansamarov" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+            <li><a href="https://instagram.com/seansamarov" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://open.spotify.com/artist/4LoTRR8Jqc9XfeIVDhMl4l" target="_blank" rel="noopener noreferrer">Spotify</a></li>
+            <li><a href="https://music.apple.com/us/artist/sean-samarov/1550251567" target="_blank" rel="noopener noreferrer">Apple Music</a></li>
+            <li><a href="https://tidal.com/browse/artist/23229323" target="_blank" rel="noopener noreferrer">Tidal</a></li>
+            <li><a href="https://github.com/seansamarov" target="_blank" rel="noopener noreferrer">Github</a></li>
+            <li><a href="#contact-form" rel="noopener noreferrer">Contact Me</a></li>
         </ul>
         <hr>
         <p>&copy; Sean Samarov <script>document.write(new Date().getFullYear().toString())</script>. All Rights Reserved &HorizontalLine; even if you want my crappy design or code, you can't have it.</p>
     </footer>
+    <%- OBF_MAILTO_FORM %>
 </body>
 <script>
     // TODO stop this from fucking up the layout
@@ -105,5 +110,8 @@
     // function quoteSelect() {QUOTE.innerText = QUOTES[i % QUOTES.length]; i++}
     // quoteSelect();
     // setInterval(quoteSelect, 10000);
+</script>
+<script>
+
 </script>
 </html>
