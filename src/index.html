@@ -34,7 +34,7 @@
             background-color: #CFD6E2;
             padding: min(5vw, 128px);
         }
-        .section {
+        section, .section {
             display: none;
             &:target, &:target-within {
                 display: block;
@@ -71,6 +71,7 @@
             <ul>
                 <li><a href="">Github</a></li>
                 <li><a href="">Medium</a></li>
+                <li><a href="#contact">Contact Me</a></li>
                 <li><a href="#about">About This Site</a></li>
             </ul>
         </nav>
@@ -79,7 +80,7 @@
         <!-- WEB WORK -->
         <section class="section" id="websites">
             <h1>The Web</h1>
-            <article class="project" id="null">
+            <article class="project" id="null.black">
                 <img src="img/null.png" alt="The homepage of null.black" width="360" height="256">
                 <h2 class="project-title">null.black</h2>
                 <span class="project-date">Feb 2021 - Oct 2021</span>
@@ -124,7 +125,9 @@
                 <p>A demo of a multiplayer game of tag with three teams - Rocks, Papers, and Scissors. When a Rock player is tagged by a Paper player, the Rock becomes Paper, and so on for all three teams. The game ends when everyone ends up on a single team. The game is written in Unity with C#, with assets produced in Blender. At the time of writing, the game is unreleased, but after some polishing and additional graphics work, I hope to get the attention of a publisher!</p>
                 <h3>Core Responsibilities</h3>
                 <ul class="project-responsibilities">
-
+                    <li>Concept and Direction</li>
+                    <li></li>
+                    <li>Network Architecture and Protocol Design</li>
                 </ul>
             </article>
         </section>
@@ -145,11 +148,31 @@
         <section class="section" id="music"></section>
         <section class="section" id="art"></section>
         <section class="section" id="about">
+            <h2>wtf is going on here</h2>
             <p>
                 While I am competent with web frameworks like React and they certainly have their place on the web, I've always prided myself on being able to make simple, effective and efficient websites. I have a personal distaste for using a framework or a library just because you can. I don't believe good software is made when you put the solution ahead of the problem. 
                 <br><br>
-                In that spirit, this site is pure HTML and CSS and can run on any device from the past 20 years. It uses less memory and loads faster than the Google homepage. No compromises have been made on SEO or performance for the sake of cool animations. This site also makes full use of semantic HTML, so you won't find a single <code>&lt;div&gt;</code> anywhere in <a href="http://github.com/" target="_blank" rel="noopener noreferrer"></a>the source code.</p>
+                In that spirit, this site is pure HTML and CSS and can run on any device from the past 20 years. It uses less memory and loads faster than the Google homepage. No compromises have been made on SEO or performance for the sake of cool animations. This site also makes full use of semantic HTML, so you won't find a single <code>&lt;div&gt;</code> anywhere in <a href="http://github.com/" target="_blank" rel="noopener noreferrer"></a>the source code. 
+                <br><br>
+                You'll also find that the template-like behavior of this site has been achieved with pure CSS (and would function perfectly as raw HTML)!
+            </p>
         </section>
+        <form  id="contact" class="section" method="GET" action="mailto:sean@samarov.me" enctype="text/plain">
+            <fieldset>
+                <legend>
+                    <h2>Let's Chat</h2>
+                </legend>
+                <a href="#null" id="form-close">&times;</a>
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" id="subject" placeholder="Howdy! Found you through your website." required>
+                <label for="cc">Your Email</label>
+                <input type="email" name="cc" id="cc" placeholder="Where can I reach you?" required>
+                <label for="body" required>Your message for me</label>
+                <textarea name="body" id="body" cols="60" rows="10" placeholder="What can I do for ya?" required></textarea>
+                <br>
+                <input type="submit"><a href="#" id="back-btn">Back</a>
+            </fieldset>
+        </form>
     </main>
 </body>
 </html>

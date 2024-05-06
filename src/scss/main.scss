@@ -16,13 +16,18 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 2.5rem;
     margin-left: -0.15ch;
-    line-height: 150%;
 }
 h2 {
     font-size: 1.75rem;
+    line-height: 150%;
 }
+h3 {
+    font-size: 1.25rem;
+}
+
 ul {
     overflow: hidden; // Hack to get list-items to respect floated image
+    margin: 1ch 0;
     padding-left: 1.5ch;
     list-style: square;
     li {
@@ -40,7 +45,14 @@ ul {
         margin-right: 1em;
         object-fit: cover;
     }
+    .project-date {
+        color: hsla(0, 0%, 0%, 70%);
+    }
+    .project-role {
+        display: block;
+    }
     .project-description {
         text-align: justify;
     }
+    
 }
