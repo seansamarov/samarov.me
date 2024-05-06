@@ -1,0 +1,234 @@
+$white-bg: hsla(0, 0%, 100%, 90%);
+$white-text: hsla(0, 0%, 100%, 80%);
+$black-text: hsla(0, 0%, 0%, 95%);
+$shadow: hsla(0, 0%, 0%, 25%);
+:root { 
+    font-size: calc(15px + 0.390625vw);
+    color: $black-text;
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+    Utility Classes 
+*/
+h1,
+h2 {
+    font-weight: 700;
+}
+.body-text,
+footer {
+    padding: 2rem;
+}
+.hidden {
+    opacity: 0;
+}
+.bg-video {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(50%);
+}
+#cta {
+    margin-top: 2em;
+}
+#quote {
+    width: 768px;
+    max-width: 100%;
+    margin-top: 2em;
+    transition: 0.25s opacity;
+}
+
+@keyframes pop {
+    0% {
+        scale: 1;
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        scale: 6;
+        opacity: 0;
+    }
+}
+#pop {
+    display: inline-block;
+    transform-origin: 50% 60%;
+
+    animation-name: pop;
+    animation-play-state: paused;
+    animation-timing-function: cubic-bezier(.95,.05,.8,.04);
+    animation-duration: 0.35s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+#pop:hover {
+    animation-play-state: running;
+}
+section,
+header {
+    background-attachment: scroll;
+    background-size: cover;
+    height: 100vh;
+}
+header {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    color: $white-text;
+    h1 {
+        font-size: 5rem;
+        text-shadow: 4px 4px 4px $shadow;
+        span {
+            font-size: 1.65rem;
+        }
+    }
+    a {
+        color: hsl(200, 33%, 66%);
+        &:hover {
+            color: hsl(200, 33%, 50%);
+        }
+        &:active {
+            color: hsl(220, 33%, 50%);
+        }
+        &:visited {
+            color: hsl(220, 33%, 66%);
+        }
+    }
+}
+section {
+    display: flex; 
+    flex-flow: row wrap;
+
+    .tiles,
+    .body-text {
+        min-width: 360px;
+        width: 50vmax;
+    }
+    .body-text {
+        background-color: $white-bg;
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 0.33em;
+            color: white;
+            mix-blend-mode: multiply;
+        }
+    }
+    .tiles {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);   
+        grid-template-columns: repeat(3, 1fr); 
+        background-color: $shadow;
+        .tile {
+            aspect-ratio: 1;
+            width: 100%; height: 100%;
+            place-self: stretch;
+            object-fit: cover;
+            &[src=""] {
+                display: none;
+            }
+        }
+    }
+    #music {
+       /* background-image: url(); */
+    }
+    #three-dee-art {
+
+    }
+    @media (orientation: landscape) {
+        &:nth-child(even) .tiles {
+            // Make the positions switch every iteration
+            order: -1;
+        }
+    }
+}
+
+footer {
+    background-color: hsl(39, 77%, 96%); //$white-bg;
+    text-align: center;
+    ul {
+        li {
+            &:not(:first-child)::before {
+                 /* This selector is a fucking meme lol. It adds back the list item dot for every list item except the first one, so they're only placed in-between. */
+                content: "\025AA\02009";
+            }
+            display: inline;
+        }
+    }
+    hr {
+        margin: 1em 0;
+        opacity: 0.5;
+        border-bottom-width: 0px;
+    }
+}
+
+/*
+ *
+ * Contact Form
+ *
+ *
+*/
+
+#contact-form {
+    position: fixed;
+    display: none;
+    flex-flow: row nowrap;
+    justify-content: center; align-items: center;
+    z-index: 1;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    background-color: $shadow;
+
+    &:target {
+        display: flex;
+    }
+    #form-close {
+        position: absolute;
+        top: -0.5rem; right: 2rem;
+        font-size: 2em;
+        text-decoration: none;
+        color: $black-text;
+    }
+    fieldset {
+        position: relative;
+        display: inline-block;
+        padding: 1em 2em;
+        background-color: hsl(0, 0%, 95%);
+    }
+    legend {
+        position: relative;
+        left: -0.5em;
+        background-color: hsl(0, 0%, 95%);
+        border: 1px solid $shadow;
+        padding: 0.5em;
+    }
+    label {
+        display: block;
+        margin: 0.33em 0;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        display: inline-block;
+        width: 100%;
+        padding: 0.25em;
+    }
+    input[type="submit"] {
+        margin-top: 1em;
+        padding: 1em;
+    }
+    #back-btn {
+        margin-left: 1em;
+    }
+}
