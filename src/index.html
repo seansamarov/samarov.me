@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sean Samarov's Personal Mosh Pit</title>
+    <link rel="stylesheet" href="./scss/reset.scss">
+    <style>
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            vertical-align: baseline;
+            
+            font-size: clamp(16px, 1vw, 20px);
+            font-family: 'Gill Sans', sans-serif;
+	        line-height: 135%;
+            color: hsla(0, 0%, 0%, 85%);
+        }
+        body {
+            background-color: #CFD6E2;
+            padding: min(5vw, 128px);
+        }
+        .section {
+            display: none;
+            &:target, &:target-within {
+                display: block;
+            }
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+    </style>
+    <link rel="stylesheet" href="./scss/main.scss">
+</head>
+<body>
+    <header>
+        <h1>Hi, I'm Sean.</h1>
+        <p>I make cool shit like:</p>
+        <nav>
+            <ul>
+                <li><a href="#websites">Websites</a></li>
+                <li><a href="#infrastructure">IT Systems</a></li>
+                <li><a href="#games">Video Games</a></li>
+                <!-- Also:
+                <li><a href="#music">Music</a></li>
+                <li><a href="#art">Art</a></li> -->
+            </ul>
+        </nav>
+        <p>
+            My diverse experience spans freelance, agency and product work as well as consulting and teaching (and even the occasional research project!).
+            <br><br>
+            I've been on a hiatus from the tech world, working non-technical jobs and performing music, but I’m now actively looking for opportunities to pick up where I left off with my web and IT work.
+        </p>
+        <nav>
+            <ul>
+                <li><a href="">Github</a></li>
+                <li><a href="">Medium</a></li>
+                <li><a href="#about">About This Site</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- WEB WORK -->
+        <section class="section" id="websites">
+            <h1>The Web</h1>
+            <article class="project" id="null">
+                <img src="img/null.png" alt="The homepage of null.black" width="360" height="256">
+                <h2 class="project-title">null.black</h2>
+                <span class="project-date">Feb 2021 - Oct 2021</span>
+                <span class="project-role">Web Development and Design Lead</span>
+                <p class="project-description">A fast-paced, early-stage VPN startup where everyone wore many hats. I was tasked with making the company’s web presence more effective at conversion for new users and more functional for existing users.</p>
+                <h3>Core Responsibilities</h3>
+                <ul class="project-responsibilities">
+                    <li>UX Research</li>
+                    <li>Wireframing</li>
+                    <li>Prototyping</li>
+                    <li>Web Design</li>
+                    <li>Web Development</li>
+                    <li>Web Strategy, SEO and Analytics</li>
+                    <li>Design System Maintenance</li>
+                    <li>Design Coordination</li>
+                    <li>UX Workshops</li>
+                </ul>
+            </article>
+            <article class="project" id="des">
+                <img src="img/des.png" alt="The homepage of the Dinosaur Earth Society" width="360" height="256">
+                <h2>Dinosaur Earth Society</h2>
+                <p>Feb 2021 - Oct 2021</p>
+                <p>Web Production (Freelance)</p>
+                <p class="project-description">A satirical social media account turned into a wildly successful online business with merch and social media integrations, thanks to a highly performing, converting and extremely goofy website.</p>
+                <h3>Core Responsibilities</h3>
+                <ul class="project-responsibilities">
+                    <li>Web Development & Design</li>
+                    <li>Social Media Integration</li>
+                    <li>Web Strategy, SEO and Analytics</li>
+                    <li>Project Management</li>
+                </ul>
+            </article>
+        
+
+        </section>
+
+        <!-- GAMES -->
+        <section class="section" id="games">
+            <article class="project">
+                <img src="img/rps.jpg" alt="A walking pair of scissors, approaching menacingly from down a dark hallway." width="360" height="256">
+                <h1>Rock Paper Scissors</h1>
+                <p>A demo of a multiplayer game of tag with three teams - Rocks, Papers, and Scissors. When a Rock player is tagged by a Paper player, the Rock becomes Paper, and so on for all three teams. The game ends when everyone ends up on a single team. The game is written in Unity with C#, with assets produced in Blender. At the time of writing, the game is unreleased, but after some polishing and additional graphics work, I hope to get the attention of a publisher!</p>
+                <h3>Core Responsibilities</h3>
+                <ul class="project-responsibilities">
+
+                </ul>
+            </article>
+        </section>
+
+        <!-- IT WORK -->
+        <section class="section" id="infrastructure">
+            <article class="project">
+                <h1>New Haven</h1>
+                <p>Sep 2021 - May 2022</p>
+                <p>Infrastructure Architect (Freelance)</p>
+                <p>A large game server network, complete with an integrated CDN, redundant infrastructure with redundant-er backups and powerful and intuitive management tools. This project was essentially an integration of many different platforms and stacks &dash; AWS for backups and CDN, DigitalOcean for the web backend and management tools, and various bare metal providers for the game servers themselves.</p>
+                <ul class="project-responsibilities">
+                    <li>Infrastructure Planning, Deployment and Maintenance</li>
+                    <li>Project Management</li>
+                </ul>
+            </article>
+        </section>
+        <section class="section" id="music"></section>
+        <section class="section" id="art"></section>
+        <section class="section" id="about">
+            <p>
+                While I am competent with web frameworks like React and they certainly have their place on the web, I've always prided myself on being able to make simple, effective and efficient websites. I have a personal distaste for using a framework or a library just because you can. I don't believe good software is made when you put the solution ahead of the problem. 
+                <br><br>
+                In that spirit, this site is pure HTML and CSS and can run on any device from the past 20 years. It uses less memory and loads faster than the Google homepage. No compromises have been made on SEO or performance for the sake of cool animations. This site also makes full use of semantic HTML, so you won't find a single <code>&lt;div&gt;</code> anywhere in <a href="http://github.com/" target="_blank" rel="noopener noreferrer"></a>the source code.</p>
+        </section>
+    </main>
+</body>
+</html>

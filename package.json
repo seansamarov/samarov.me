@@ -1,0 +1,12 @@
+{
+  "name": "samarov",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel serve --port 1111",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.12.0",
+    "parcel": "^2.12.0"
+  }
+}
