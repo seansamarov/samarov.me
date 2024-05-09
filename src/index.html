@@ -3,13 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sean Samarov's Personal Mosh Pit</title>
+    <title>Sean Samarov | Creative Technologist, Web Dev and System Administrator</title>
     <link rel="stylesheet" href="./scss/reset.scss">
+
+    <!-- SEO Nonsense -->
+    <meta name="title" content="Sean Samarov | Creative Technologist, Web Dev and System Administrator">
+    <meta name="description" content="Hi there, I'm Sean. I make all kinds of cool shit for the web, I build infrastructure systems, I design stuff and I make art, sometimes all at once.">
+    <meta name="keywords" content="web developer, system administrator, it, portland, maine, javascript, html, css, linux, networks">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="Sean Samarov">
+    
     <style>
         /* Adapted from
         http://meyerweb.com/eric/tools/css/reset/ 
         v2.0 | 20110126
         License: none (public domain)
+
+        This CSS goes here to ensure it loads first and reduce layout shift.
         */
 
         html, body, div, span, applet, object, iframe,
@@ -37,18 +49,24 @@
             
             font-size: clamp(16px, 1vw, 20px);
             font-size: 1.15rem;
-            font-family: 'Gill Sans', sans-serif;
+            font-family: 'Gill Sans', 'Helvetica', sans-serif;
 	        line-height: 135%;
             line-break: auto;
         }
         body {
-            background-color: hsl(218, 40%, 70%);
+            background-color: hsl(218, 60%, 85%);
+        }
+        #default {
+            display: block;
         }
         section, .section {
             display: none;
             &:target, &:target-within {
                 display: block;
             }
+        }
+        section:target ~ #default {
+            display: none;
         }
         /* HTML5 display-role reset for older browsers */
         article, aside, details, figcaption, figure, 
@@ -68,7 +86,9 @@
                 <li><a href="#websites">Websites</a></li>
                 <li><a href="#infrastructure">IT Systems</a></li>
                 <li><a href="#games">Video Games</a></li>
-                Also:
+            </ul>
+            <span>Also:</span>
+            <ul>
                 <li><a href="#art">Art</a></li>
                 <li><a href="#music">Music</a></li>
             </ul>
@@ -76,7 +96,9 @@
         <p>
             My diverse experience spans freelance, agency and product work as well as consulting and teaching (and even the occasional research project!).
             <br><br>
-            I've been on a hiatus from the tech world, working non-technical jobs and performing music, but I’m now actively looking for opportunities to pick up where I left off with my web and IT work.
+            Lately I've been on a hiatus from the tech world, working non-technical jobs and performing music, but I’m now actively looking for opportunities to pick up where I left off with my web and IT work. 
+            <br><br>
+            I do my best work on small, creative teams and I have a lot of value to offer in that environment. Please don't hesitate to reach out if you're looking for someone with my skillset!
         </p>
         <nav>
             <ul>
@@ -176,20 +198,45 @@
         <section class="section" id="art">
             <h1>3D Artwork</h1>
             <p>The beauty of 3D artwork is in the marriage of logical and abstract creative thought. An incredible visual idea can pop into your head which can be then brought to life using clever shaders and math.
-                <br><br>
+            <br><br>
             tl;dr &dash; Blender is fuckin cool
+            <br><br>
             </p>
+            <article class="project">
+                <img src="media/heresy_render3.png" alt="An intensely dystopian scene of a massive skyscraper with an American flag draped down the side, surrounded by a glowing red sea." width="480" height="480">
+                <h2 class="project-title">The Heresy</h2>
+                <i class="project-date">Aug 2023</i>
+                <p class="project-description">An intense scene based on a song of the same name by Mushroomhead (a personal favorite of mine). If I ever release a cover of the song, some version of this scene will serve as the album cover artwork.</p>
+            </article>
             <article class="project">
                 <video src="media/ptown_gv003_1080.mp4" type="video/mp4" loop muted autoplay width="480" height="206"></video>
                 <h2 class="project-title">PTown</h2>
                 <i class="project-date">Feb 2023</i>
-                <p class="project-description">A short animation based on a foggy twilight in Provincetown, Massachusetts.</p>
+                <p class="project-description">A short animation based on a foggy twilight in Provincetown, Massachusetts. Most of the models and some of the materials are my original work, while others are assets provided by <a href="https://polyhaven.com/" target="_blank" rel="noopener noreferrer">Poly Haven</a>.</p>
+            </article>
+            <article class="project">
+                <img src="media/sciencefacility_render3.png" alt="An eery scene of the sillhouette of a man at the end of a dimly lit hallway." width="480" height="270">
+                <h2 class="project-title">Science Facility</h2>
+                <i class="project-date">Jan 2023</i>
+                <p class="project-description">A scene based on the office at my first job in Maine, where I worked 12-hour overnight shifts in a datacenter.</p>
+            </article>
+            <article class="project">
+                <img src="media/chess_render1.png" alt="A surreal scene of a chessboard in space with a single piece on one of the squares." width="480" height="270">
+                <h2 class="project-title">Chess</h2>
+                <i class="project-date">Jan 2023</i>
+                <p class="project-description">One of several concepts for an (at the time of writing) unannounced and unreleased co-op adventure game.</p>
             </article>
             <article class="project">
                 <video src="media/december.mp4" type="video/mp4" loop muted autoplay width="480" height="480"></video>
                 <h2 class="project-title">December</h2>
                 <i class="project-date">December 2022</i>
                 <p class="project-description">A snowy scene created for my latest single, My December. Aside from still frames serving as the album cover art, the animation was used as the Spotify Canvas video.</p>
+            </article>
+            <article class="project">
+                <img src="media/added_billboard.png" alt="View from a bridge overlooking a forest with a city in the distance." width="480" height="270">
+                <h2 class="project-title">Outlook</h2>
+                <i class="project-date">December 2022</i>
+                <p class="project-description">The first serious work I did in Blender, a S.T.A.L.K.E.R.-inspired scene based on views from the hills around Boston. It's not immediately clear, but the cable on the left side is intended to be a cable used to restrain <a href="https://en.wikipedia.org/wiki/Barrage_balloon" target="_blank" rel="noopener noreferrer">barrage balloons</a> like the ones seen in the distance over the city. An abandoned truck is also barely visible on the hill on the left side.</p>
             </article>
         </section>
         <section class="section" id="about">
@@ -201,6 +248,9 @@
                 <br><br>
                 I also obsess over responsive design - I encourage the user to resize their browser window on this site however they wish, and try to break the layout. If you do manage to break it, <a href="#contact">leave me a note</a> letting me know so I can fix it.
             </p>
+        </section>
+        <section class="section" id="default">
+            <img src="media/Sean guitar Costell2.jpg" alt="Me performing in downtown Gardiner, ME" width="960" height="960" class="me">
         </section>
         <form  id="contact" class="section" method="GET" action="mailto:sean@samarov.me" enctype="text/plain">
             <fieldset>
