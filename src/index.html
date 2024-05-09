@@ -6,6 +6,12 @@
     <title>Sean Samarov's Personal Mosh Pit</title>
     <link rel="stylesheet" href="./scss/reset.scss">
     <style>
+        /* Adapted from
+        http://meyerweb.com/eric/tools/css/reset/ 
+        v2.0 | 20110126
+        License: none (public domain)
+        */
+
         html, body, div, span, applet, object, iframe,
         h1, h2, h3, h4, h5, h6, p, blockquote, pre,
         a, abbr, acronym, address, big, cite, code,
@@ -17,22 +23,26 @@
         table, caption, tbody, tfoot, thead, tr, th, td,
         article, aside, canvas, details, embed, 
         figure, figcaption, footer, header, hgroup, 
-        menu, nav, output, ruby, section, summary,
+        menu, nav, main, output, ruby, section, summary,
         time, mark, audio, video {
+            /* In the opinion of this developer,
+             * These are the most important two lines of CSS boilerplate
+            */
             box-sizing: border-box;
+            scroll-behavior: smooth;
             margin: 0;
             padding: 0;
             border: 0;
             vertical-align: baseline;
             
             font-size: clamp(16px, 1vw, 20px);
+            font-size: 1.15rem;
             font-family: 'Gill Sans', sans-serif;
 	        line-height: 135%;
-            color: hsla(0, 0%, 0%, 85%);
+            line-break: auto;
         }
         body {
-            background-color: #CFD6E2;
-            padding: min(5vw, 128px);
+            background-color: hsl(218, 40%, 70%);
         }
         section, .section {
             display: none;
@@ -47,6 +57,7 @@
         }
     </style>
     <link rel="stylesheet" href="./scss/main.scss">
+    <link rel="stylesheet" href="./scss/desktop.scss" media="only screen and (min-width: 1600px)">
 </head>
 <body>
     <header>
@@ -57,9 +68,9 @@
                 <li><a href="#websites">Websites</a></li>
                 <li><a href="#infrastructure">IT Systems</a></li>
                 <li><a href="#games">Video Games</a></li>
-                <!-- Also:
+                Also:
+                <li><a href="#art">Art</a></li>
                 <li><a href="#music">Music</a></li>
-                <li><a href="#art">Art</a></li> -->
             </ul>
         </nav>
         <p>
@@ -69,8 +80,8 @@
         </p>
         <nav>
             <ul>
-                <li><a href="">Github</a></li>
-                <li><a href="">Medium</a></li>
+                <li><a href="https://github.com/seansamarov/">Github</a></li>
+                <li><a href="https://medium.com/@seansamarov">Medium</a></li>
                 <li><a href="#contact">Contact Me</a></li>
                 <li><a href="#about">About This Site</a></li>
             </ul>
@@ -79,13 +90,13 @@
     <main>
         <!-- WEB WORK -->
         <section class="section" id="websites">
-            <h1>The Web</h1>
+            <h1>Web Dev and Design</h1>
             <article class="project" id="null.black">
-                <img src="img/null.png" alt="The homepage of null.black" width="360" height="256">
+                <img src="media/null.png" alt="The homepage of null.black" width="360" height="256">
                 <h2 class="project-title">null.black</h2>
-                <span class="project-date">Feb 2021 - Oct 2021</span>
                 <span class="project-role">Web Development and Design Lead</span>
-                <p class="project-description">A fast-paced, early-stage VPN startup where everyone wore many hats. I was tasked with making the company’s web presence more effective at conversion for new users and more functional for existing users.</p>
+                <i class="project-date">Feb 2021 - Oct 2021</i>
+                <p class="project-description">A fast-paced, early-stage VPN startup where everyone wore many hats. I was tasked with making the company’s web presence more effective at conversion for new users and more functional for existing users, while also legitimizing the company as a serious competitor with a unique offering in a crowded space, rather than the hacked-together high school project it started out as.</p>
                 <h3>Core Responsibilities</h3>
                 <ul class="project-responsibilities">
                     <li>UX Research</li>
@@ -100,10 +111,10 @@
                 </ul>
             </article>
             <article class="project" id="des">
-                <img src="img/des.png" alt="The homepage of the Dinosaur Earth Society" width="360" height="256">
-                <h2>Dinosaur Earth Society</h2>
-                <p>Feb 2021 - Oct 2021</p>
+                <img src="media/des.png" alt="The homepage of the Dinosaur Earth Society" width="360" height="256">
+                <h2 class="project-title">Dinosaur Earth Society</h2>
                 <p>Web Production (Freelance)</p>
+                <i class="project-date">Feb 2021 - Oct 2021</i>
                 <p class="project-description">A satirical social media account turned into a wildly successful online business with merch and social media integrations, thanks to a highly performing, converting and extremely goofy website.</p>
                 <h3>Core Responsibilities</h3>
                 <ul class="project-responsibilities">
@@ -113,48 +124,82 @@
                     <li>Project Management</li>
                 </ul>
             </article>
-        
-
         </section>
 
         <!-- GAMES -->
         <section class="section" id="games">
+            <h1>Games</h1>
             <article class="project">
-                <img src="img/rps.jpg" alt="A walking pair of scissors, approaching menacingly from down a dark hallway." width="360" height="256">
-                <h1>Rock Paper Scissors</h1>
-                <p>A demo of a multiplayer game of tag with three teams - Rocks, Papers, and Scissors. When a Rock player is tagged by a Paper player, the Rock becomes Paper, and so on for all three teams. The game ends when everyone ends up on a single team. The game is written in Unity with C#, with assets produced in Blender. At the time of writing, the game is unreleased, but after some polishing and additional graphics work, I hope to get the attention of a publisher!</p>
+                <img src="media/rps.jpg" alt="A walking pair of scissors, approaching menacingly from down a dark hallway." width="360" height="256">
+                <h2 class="project-title">Rock Paper Scissors</h2>
+                <i class="project-date">March 2024 - Ongoing</i>
+                <p class="project-description">A demo of a multiplayer game of tag with three teams - Rocks, Papers, and Scissors. When a Rock player is tagged by a Paper player, the Rock becomes Paper, and so on for all three teams. The game ends when everyone ends up on a single team. The game is written in Unity with C#, with assets produced in Blender. At the time of writing, the game is unreleased, but after some polishing and additional graphics work, I hope to get the attention of a publisher (or at least release it independently)!</p>
                 <h3>Core Responsibilities</h3>
                 <ul class="project-responsibilities">
                     <li>Concept and Direction</li>
-                    <li></li>
+                    <li>3D Modeling and Animation</li>
+                    <li>World Design</li>
                     <li>Network Architecture and Protocol Design</li>
                 </ul>
             </article>
         </section>
-
         <!-- IT WORK -->
         <section class="section" id="infrastructure">
+            <h1>IT Infrastructure Projects</h1>
             <article class="project">
-                <h1>New Haven</h1>
-                <p>Sep 2021 - May 2022</p>
-                <p>Infrastructure Architect (Freelance)</p>
+                <h2 class="project-title">New Haven</h2>
+                <span class="project-role">Infrastructure Architect (Freelance)</span>
+                <i class="project-date">Sep 2021 - May 2022</i>
                 <p>A large game server network, complete with an integrated CDN, redundant infrastructure with redundant-er backups and powerful and intuitive management tools. This project was essentially an integration of many different platforms and stacks &dash; AWS for backups and CDN, DigitalOcean for the web backend and management tools, and various bare metal providers for the game servers themselves.</p>
+                <ul class="project-responsibilities">
+                    <li>Infrastructure Planning, Deployment and Maintenance</li>
+                    <li>Linux and Windows Server Administration</li>
+                    <li>Project Management</li>
+                </ul>
+            </article>
+            <article class="project">
+                <h2 class="project-title">Ineptitech Internal Network</h2>
+                <span class="project-role">Freelance</span>
+                <i class="project-date">Sep 2021 - May 2022</i>
+                <p class="project-description">An internal network using Tailscale which connected and provided secure access to all network resources, including our cloud infrastructure, bare metal servers, and my own home lab which was used for testing and staging. It also included network storage, development VMs for all developers</p>
                 <ul class="project-responsibilities">
                     <li>Infrastructure Planning, Deployment and Maintenance</li>
                     <li>Project Management</li>
                 </ul>
             </article>
         </section>
-        <section class="section" id="music"></section>
-        <section class="section" id="art"></section>
+        <section class="section" id="music">
+            <h1>Music Stuff</h1>
+            <p>Grew up playing Classical piano. Branched out into bass in 2020, then guitar in 2021. Always loved singing, only started seriously singing in the past 10 years. Released two solo singles and one single with Off By One. Currently a performing musician in Maine.</p>
+            Enumerate releases here
+        </section>
+        <section class="section" id="art">
+            <h1>3D Artwork</h1>
+            <p>The beauty of 3D artwork is in the marriage of logical and abstract creative thought. An incredible visual idea can pop into your head which can be then brought to life using clever shaders and math.
+                <br><br>
+            tl;dr &dash; Blender is fuckin cool
+            </p>
+            <article class="project">
+                <video src="media/ptown_gv003_1080.mp4" type="video/mp4" loop muted autoplay width="480" height="206"></video>
+                <h2 class="project-title">PTown</h2>
+                <i class="project-date">Feb 2023</i>
+                <p class="project-description">A short animation based on a foggy twilight in Provincetown, Massachusetts.</p>
+            </article>
+            <article class="project">
+                <video src="media/december.mp4" type="video/mp4" loop muted autoplay width="480" height="480"></video>
+                <h2 class="project-title">December</h2>
+                <i class="project-date">December 2022</i>
+                <p class="project-description">A snowy scene created for my latest single, My December. Aside from still frames serving as the album cover art, the animation was used as the Spotify Canvas video.</p>
+            </article>
+        </section>
         <section class="section" id="about">
-            <h2>wtf is going on here</h2>
+            <h1>wtf is going on here</h1>
             <p>
                 While I am competent with web frameworks like React and they certainly have their place on the web, I've always prided myself on being able to make simple, effective and efficient websites. I have a personal distaste for using a framework or a library just because you can. I don't believe good software is made when you put the solution ahead of the problem. 
                 <br><br>
-                In that spirit, this site is pure HTML and CSS and can run on any device from the past 20 years. It uses less memory and loads faster than the Google homepage. No compromises have been made on SEO or performance for the sake of cool animations. This site also makes full use of semantic HTML, so you won't find a single <code>&lt;div&gt;</code> anywhere in <a href="http://github.com/" target="_blank" rel="noopener noreferrer"></a>the source code. 
+                In that spirit, this site is pure HTML and CSS and can run on any device from the past 20 years. It uses less memory and loads faster than the Google homepage. No compromises have been made on SEO or performance for the sake of cool animations. This site also makes full use of semantic HTML, so you won't find a single <code>&lt;div&gt;</code> anywhere in <a href="http://github.com/" target="_blank" rel="noopener noreferrer"></a>the source code. You'll also find that the template-like behavior of this site has been achieved with pure CSS (and would function perfectly as raw HTML)!
                 <br><br>
-                You'll also find that the template-like behavior of this site has been achieved with pure CSS (and would function perfectly as raw HTML)!
+                I also obsess over responsive design - I encourage the user to resize their browser window on this site however they wish, and try to break the layout. If you do manage to break it, <a href="#contact">leave me a note</a> letting me know so I can fix it.
             </p>
         </section>
         <form  id="contact" class="section" method="GET" action="mailto:sean@samarov.me" enctype="text/plain">
@@ -162,7 +207,7 @@
                 <legend>
                     <h2>Let's Chat</h2>
                 </legend>
-                <a href="#null" id="form-close">&times;</a>
+                <a href="#" id="form-close">&times;</a>
                 <label for="subject">Subject</label>
                 <input type="text" name="subject" id="subject" placeholder="Howdy! Found you through your website." required>
                 <label for="cc">Your Email</label>
@@ -170,7 +215,8 @@
                 <label for="body" required>Your message for me</label>
                 <textarea name="body" id="body" cols="60" rows="10" placeholder="What can I do for ya?" required></textarea>
                 <br>
-                <input type="submit"><a href="#" id="back-btn">Back</a>
+                <a href="#" id="back-btn">Back</a>
+                <input type="submit">
             </fieldset>
         </form>
     </main>

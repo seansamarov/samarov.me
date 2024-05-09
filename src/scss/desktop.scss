@@ -1,0 +1,13 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+header, main {
+    padding: min(5vw, 128px) 1rem;
+}
+main {
+    // Fancy scroll behavior
+    height: 100%;
+    overflow-y: scroll;
+}

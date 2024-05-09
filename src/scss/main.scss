@@ -1,14 +1,28 @@
+$black: hsla(0, 0%, 0%, 80%);
+$less-black: hsla(0, 0%, 0%, 70%);
+$white-text: hsla(0, 0%, 100%, 80%);
+$shadow: hsla(0, 0%, 0%, 25%);
 body {
     display: flex;
     flex-flow: row wrap;
+    color: $black;
+    justify-content: space-between;
+}
+header, main {
+    padding: 2rem;
 }
 header {
-    width: 35%;
-    overflow: hidden;
+    width: 30%;
+    flex-grow: 2;
+    nav {
+        ul {
+            margin: 1ch 0;
+        }
+    }
 }
 main {
-    width: 65%;
-    min-width: 640px;
+    flex-basis: 66%;
+    flex-grow: 1;
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
@@ -16,10 +30,11 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 2.5rem;
     margin-left: -0.15ch;
+    margin-bottom: 1ch;
+    line-height: 1em;
 }
 h2 {
     font-size: 1.75rem;
-    line-height: 150%;
 }
 h3 {
     font-size: 1.25rem;
@@ -27,7 +42,6 @@ h3 {
 
 ul {
     overflow: hidden; // Hack to get list-items to respect floated image
-    margin: 1ch 0;
     padding-left: 1.5ch;
     list-style: square;
     li {
@@ -38,21 +52,86 @@ ul {
     }
 }
 .project {
+    overflow: auto;
     margin-bottom: 1em;
-    img {
+    img, video, object {
         float: left;
         clear: both;
         margin-right: 1em;
         object-fit: cover;
     }
     .project-date {
-        color: hsla(0, 0%, 0%, 70%);
+        display: inline-block;
+        color: $less-black;
+        font-size: 1rem;
     }
     .project-role {
         display: block;
     }
     .project-description {
+        margin: 0.5ch 0;
         text-align: justify;
     }
     
+}
+
+/*
+ *
+ * Contact Form
+ *
+ *
+*/
+
+#contact {
+    position: fixed;
+    display: none;
+    flex-flow: row nowrap;
+    justify-content: center; align-items: center;
+    z-index: 1;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    background-color: $shadow;
+
+    &:target {
+        display: flex;
+    }
+    #form-close {
+        position: absolute;
+        top: -0.5rem; right: 2rem;
+        font-size: 2em;
+        text-decoration: none;
+        color: $black;
+    }
+    fieldset {
+        position: relative;
+        display: inline-block;
+        padding: 1em 2em;
+        background-color: hsla(0, 0%, 95%, 90%);
+    }
+    legend {
+        position: relative;
+        left: -0.5em;
+        background-color: hsla(0, 0%, 95%, 90%);
+        border: 1px solid $shadow;
+        padding: 0.5em;
+    }
+    label {
+        display: block;
+        margin: 0.33em 0;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        display: inline-block;
+        width: 100%;
+        padding: 0.25em;
+    }
+    input[type="submit"] {
+        margin-top: 1em;
+        padding: 1em;
+    }
+    #back-btn {
+        margin-right: 1em;
+    }
 }
