@@ -3,10 +3,12 @@
   "source": "src/index.html",
   "scripts": {
     "start": "parcel serve --port 1111",
-    "build": "parcel build"
+    "build": "parcel build",
+    "upload": "if [ \"$(read -p 'Have you already run yarn build? (y/n): ')\"  == \"y\" ]; then scp -r $PWD/dist/* web1:/home/sean/samarov.me; fi"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "2.12.0",
     "parcel": "^2.12.0"
-  }
+  },
+  "version": "0.9.0"
 }
