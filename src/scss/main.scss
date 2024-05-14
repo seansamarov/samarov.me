@@ -1,36 +1,33 @@
 $black: hsla(0, 0%, 0%, 80%);
 $less-black: hsla(0, 0%, 0%, 70%);
-$white-text: hsla(0, 0%, 100%, 80%);
+$white-overlay: hsla(0, 0%, 100%, 80%);
 $shadow: hsla(0, 0%, 0%, 25%);
 html,body {
     height: 100%;
-}
-body {
-    display: flex;
-    flex-flow: row wrap;
     color: $black;
-    justify-content: space-between;
 }
-header { flex-basis: 30%; }
-main { flex-basis: 65%; }
 header, main {
-    flex-grow: 1;
-    padding: 1rem;
+    padding: 5vw;
+}
+header {
+    min-height: 70vh;
 }
 nav > ul {
     margin: 1ch 0;
 }
 h1, h2, h3, h4, h5, h6 {
+    line-height: 1em;
     font-weight: 600;
 }
-h1 {
-    font-size: 2.5rem;
-    margin-left: -0.15ch;
-    margin-bottom: 1ch;
-    line-height: 1em;
-}
-h2 { font-size: 1.75rem; }
+h1 { font-size: 2.5rem; line-height: 2em; }
+h2 { font-size: 1.75rem; margin-bottom: 0.5ch; }
 h3 { font-size: 1.25rem; }
+
+a {
+    // So that links in h1-6 tags still look like h1-6 tags
+    font: inherit;
+}
+
 a:link {}
 a:local-link {}
 a:visited {}
@@ -48,95 +45,68 @@ ul {
     }
 }
 
+section, .section {
+    margin-bottom: 3vh;
+}
 
+#btt {
+    position: fixed;
+    bottom: 1ch;
+    right: 1ch;
+
+    padding: 2rem;
+    border-radius: 50%;
+    background-color: $white-overlay;
+
+    text-decoration: none;
+    color: inherit;
+
+    @media screen and (min-width: 1200px) and (orientation: landscape) {
+        transition: scale 0.25s ease-in-out;
+    }
+
+    &:hover {
+        scale: 110%;
+    }
+}
 
 .me {
     max-width: 100%;
+    max-height: 50vh;
+    width: auto;
+    aspect-ratio: 1;
+    float: left;
+    margin-right: 2em;
     object-fit: cover;
     mix-blend-mode: luminosity;
     opacity: 0.25;
+    order: 0;
 }
 .project {
+    border: 1px solid hsla(0, 0%, 0%, 20%);
+    padding: 2rem; 
+
     overflow: auto;
     margin-bottom: 1em;
     img, video, object {
-        max-width: 100%;
         float: left;
         clear: both;
+        max-width: 100%;
+        height: auto;
+        max-height: 60vh;
         margin-right: 1em;
+        margin-bottom: 1em;
         object-fit: cover;
     }
-    .project-date {
-        display: inline-block;
-        color: $less-black;
-        font-size: 1rem;
-    }
-    .project-role {
-        display: block;
-    }
-    .project-description {
-        margin: 0.5ch 0;
-    }
-    
 }
-
-/*
- *
- * Contact Form
- *
- *
-*/
-
-#contact {
-    position: fixed;
-    display: none;
-    flex-flow: row nowrap;
-    justify-content: center; align-items: center;
-    z-index: 1;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-
-    background-color: $shadow;
-
-    &:target {
-        display: flex;
-    }
-    #form-close {
-        position: absolute;
-        top: -0.5rem; right: 2rem;
-        font-size: 2em;
-        text-decoration: none;
-        color: $black;
-    }
-    fieldset {
-        position: relative;
-        display: inline-block;
-        padding: 1em 2em;
-        background-color: hsla(0, 0%, 95%, 90%);
-    }
-    legend {
-        position: relative;
-        left: -0.5em;
-        background-color: hsla(0, 0%, 95%, 90%);
-        border: 1px solid $shadow;
-        padding: 0.5em;
-    }
-    label {
-        display: block;
-        margin: 0.33em 0;
-    }
-    input[type="text"],
-    input[type="email"],
-    textarea {
-        display: inline-block;
-        width: 100%;
-        padding: 0.25em;
-    }
-    input[type="submit"] {
-        margin-top: 1em;
-        padding: 1em;
-    }
-    #back-btn {
-        margin-right: 1em;
-    }
+.project-date, .subtext {
+    display: inline-block;
+    color: $less-black;
+    font-size: 1rem;
+}
+.project-role {
+    display: block;
+}
+.project-description {
+    margin: 0.5ch 0;
 }

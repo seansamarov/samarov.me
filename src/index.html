@@ -27,7 +27,9 @@
     <meta property="twitter:image" content="./media/Sean guitar Costell2.jpg" />
 
     <!-- Meta Tags Generated with https://metatags.io -->
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
         /* Adapted from
         http://meyerweb.com/eric/tools/css/reset/ 
@@ -55,6 +57,7 @@
             */
             box-sizing: border-box;
             scroll-behavior: smooth;
+
             margin: 0;
             padding: 0;
             border: 0;
@@ -62,21 +65,23 @@
             
             font-size: clamp(16px, 1vw, 20px);
             font-size: 1.15rem;
-            font-family: 'Gill Sans', 'Helvetica', sans-serif;
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings:
+                "slnt" 0;
 	        line-height: 135%;
             line-break: auto;
         }
         body {
-            background-color: hsl(218, 60%, 85%);
+            background-color: hsl(240, 4%, 95%);
         }
-        #default {
-            display: block;
-        }
-        section, .section {
+        .project-group {
             display: none;
-            &:target, &:target-within {
-                display: block;
-            }
+        }
+        .project-group:target-within, .project-group:has(:target) {
+            display: block;
         }
         section:target ~ #default {
             display: none;
@@ -88,17 +93,18 @@
         }
     </style>
     <link rel="stylesheet" href="./scss/main.scss">
-    <link rel="stylesheet" href="./scss/desktop.scss" media="only screen and (min-width: 1600px)">
 </head>
 <body>
+    <a id="btt" href="#">&uarr;</a>
     <header>
+        <img src="media/Sean guitar Costell2.jpg" alt="Me performing in downtown Gardiner, ME" width="960" height="960" class="me">
         <h1>Hi, I'm Sean.</h1>
-        <p>I make cool shit like:</p>
+        <h2>I make cool shit like:</h2>
         <nav>
             <ul>
                 <li><a href="#websites">Websites</a></li>
-                <li><a href="#infrastructure">IT Systems</a></li>
                 <li><a href="#games">Video Games</a></li>
+                <li><a href="#infrastructure">IT Systems</a></li>
             </ul>
             <span>Also:</span>
             <ul>
@@ -107,181 +113,176 @@
             </ul>
         </nav>
         <p>
-            My diverse experience spans freelance, agency and product work as well as consulting and teaching (and even the occasional research project!).
+            My experience includes freelance, agency, and product work, consulting, teaching, and occasional research.
             <br><br>
-            Lately I've been on a hiatus from the tech world, working non-technical jobs and performing music, but I’m now actively looking for opportunities to pick up where I left off with my web and IT work. 
-            <br><br>
-            I do my best work on small, creative teams and I have a lot of value to offer in that environment. Please don't hesitate to reach out if you're looking for someone with my skillset!
+            I work best in small, creative teams where I can contribute to many aspects of projects.
         </p>
         <nav>
             <ul>
                 <li><a href="https://github.com/seansamarov/">Github</a></li>
                 <li><a href="https://medium.com/@seansamarov">Medium</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="mailto:sean@samarov.me?subject=Website Contact&body=Your Message">Contact Me</a></li>
                 <li><a href="#about">About This Site</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <!-- WEB WORK -->
-        <section class="section" id="websites">
-            <h1>Web Dev and Design</h1>
-            <article class="project" id="null.black">
-                <img src="media/null.png" alt="The homepage of null.black" width="360" height="256">
-                <h2 class="project-title">null.black</h2>
-                <span class="project-role">Web Development and Design Lead</span>
-                <i class="project-date">Feb 2021 - Oct 2021</i>
-                <p class="project-description">A fast-paced, early-stage VPN startup where everyone wore many hats. I was tasked with making the company’s web presence more effective at conversion for new users and more functional for existing users, while also legitimizing the company as a serious competitor with a unique offering in a crowded space, rather than the hacked-together high school project it started out as.</p>
-                <h3>Core Responsibilities</h3>
-                <ul class="project-responsibilities">
-                    <li>UX Research</li>
-                    <li>Wireframing</li>
-                    <li>Prototyping</li>
-                    <li>Web Design</li>
-                    <li>Web Development</li>
-                    <li>Web Strategy, SEO and Analytics</li>
-                    <li>Design System Maintenance</li>
-                    <li>Design Coordination</li>
-                    <li>UX Workshops</li>
-                </ul>
-            </article>
-            <article class="project" id="des">
-                <img src="media/des.png" alt="The homepage of the Dinosaur Earth Society" width="360" height="256">
-                <h2 class="project-title">Dinosaur Earth Society</h2>
-                <p>Web Production (Freelance)</p>
-                <i class="project-date">Feb 2021 - Oct 2021</i>
-                <p class="project-description">A satirical social media account turned into a wildly successful online business with merch and social media integrations, thanks to a highly performing, converting and extremely goofy website.</p>
-                <h3>Core Responsibilities</h3>
-                <ul class="project-responsibilities">
-                    <li>Web Development & Design</li>
-                    <li>Social Media Integration</li>
-                    <li>Web Strategy, SEO and Analytics</li>
-                    <li>Project Management</li>
-                </ul>
-            </article>
+        <section class="project-group">
+            <!-- WEB WORK -->
+            <section class="section" id="websites">
+                <h1>Web Dev and Design</h1>
+                <article class="project" id="null.black">
+                    <img src="media/null.png" alt="The homepage of null.black" width="960" height="540">
+                    <h2 class="project-title"><a href="https://null.black" target="_blank" rel="noopener noreferrer">null.black</a></h2>
+                    <span class="project-role">Web Development and Design Lead</span>
+                    <i class="project-date">Feb 2021 - Oct 2021</i>
+                    <p class="project-description">
+                        A fast-paced, early-stage VPN startup where I was responsible for improving the company's online presence and establishing it as a serious competitor in a crowded market.
+                    </p>
+                    <ul class="project-responsibilities">
+                        <li>UX Research</li>
+                        <li>Wireframing</li>
+                        <li>Prototyping</li>
+                        <li>Web Development</li>
+                        <li>Web Strategy, SEO and Analytics</li>
+                        <li>Design System Maintenance</li>
+                        <li>UX Workshops</li>
+                    </ul>
+                </article>
+                <article class="project" id="des">
+                    <img src="media/des.png" alt="The homepage of the Dinosaur Earth Society" width="960" height="540">
+                    <h2 class="project-title"><a href="https://dinosaurearthsociety.com" target="_blank" rel="noopener noreferrer">Dinosaur Earth Society</a></h2>
+                    <p>Web Production (Freelance)</p>
+                    <i class="project-date">Feb 2021 - Oct 2021</i>
+                    <p class="project-description">
+                        A satirical social media account evolved into a thriving online business with merchandise and social media integrations, all thanks to a high-performing and quirky website.
+                    </p>
+                    <ul class="project-responsibilities">
+                        <li>Web Development & Design</li>
+                        <li>Social Media Integration</li>
+                        <li>Web Strategy, SEO and Analytics</li>
+                        <li>Project Management</li>
+                    </ul>
+                </article>
+            </section>
+            <!-- GAMES -->
+            <section class="section" id="games">
+                <h1>Games</h1>
+                <article class="project">
+                    <img src="media/rps.jpg" alt="A walking pair of scissors, approaching menacingly from down a dark hallway."  width="960" height="540">
+                        <h2 class="project-title">
+                            <a href="https://github.com/Ineptitech/rock-paper-scissors" target="_blank" rel="noopener noreferrer">Rock Paper Scissors</a>
+                        </h2>
+                    <i class="project-date">March 2024 - Ongoing</i>
+                    <p class="project-description">
+                        A demo of a multiplayer tag game (unreleased). It's made in Unity with C# and Blender assets. It uses a decentralized LAN network model where every client is trusted implicitly.
+                    </p>
+                    <ul class="project-responsibilities">
+                        <li>Concept and Direction</li>
+                        <li>3D Modeling and Animation</li>
+                        <li>World Design</li>
+                        <li>Network Architecture and Protocol Design</li>
+                    </ul>
+                </article>
+            </section>
+            <!-- IT WORK -->
+            <section class="section" id="infrastructure">
+                <h1>IT Infrastructure Projects</h1>
+                <article class="project">
+                    <h2 class="project-title">New Haven</h2>
+                    <span class="project-role">Infrastructure Architect (Freelance)</span>
+                    <i class="project-date">Sep 2021 - May 2022</i>
+                    <p class="project-description">
+                        A large game server network with an integrated CDN and redundant infrastructure, as well as powerful management tools. This involved integrating different platforms and stacks, using AWS for backups and CDN, DigitalOcean for the web backend and management tools, and various bare metal providers for the game servers themselves.
+                    </p>
+                    <ul class="project-responsibilities">
+                        <li>Infrastructure Planning, Deployment and Maintenance</li>
+                        <li>Linux and Windows Server Administration</li>
+                        <li>Project Management</li>
+                    </ul>
+                </article>
+                <article class="project">
+                    <h2 class="project-title">Freelance Internal Network</h2>
+                    <span class="project-role">Freelance</span>
+                    <i class="project-date">Sep 2021 - May 2022</i>
+                    <p class="project-description">
+                        An internal network using Tailscale, providing secure access to all network resources, including cloud infrastructure, bare metal servers, and my home lab for testing. It also includes access to network storage and development VMs for my freelance developers.
+                    </p>
+                    <ul class="project-responsibilities">
+                        <li>Infrastructure Planning, Deployment and Maintenance</li>
+                        <li>Project Management</li>
+                    </ul>
+                </article>
+            </section>
         </section>
+        <section class="project-group">
+            <section class="section" id="music">
+                <h1>Music Stuff</h1>
+                 <p>
+                    Since I was young, I have had a strong passion for music. I began taking piano lessons when I was 4 years old, and music has been a significant part of my life ever since. Over time, I developed a fondness for various music genres, and I have since crafted my own unique musical style, blending the subtle, dramatic, and emotive elements of classical music with the melodic release and energy of punk, rock, and metal music.
 
-        <!-- GAMES -->
-        <section class="section" id="games">
-            <h1>Games</h1>
-            <article class="project">
-                <img src="media/rps.jpg" alt="A walking pair of scissors, approaching menacingly from down a dark hallway." width="360" height="256">
-                <h2 class="project-title">Rock Paper Scissors</h2>
-                <i class="project-date">March 2024 - Ongoing</i>
-                <p class="project-description">A demo of a multiplayer game of tag with three teams - Rocks, Papers, and Scissors. When a Rock player is tagged by a Paper player, the Rock becomes Paper, and so on for all three teams. The game ends when everyone ends up on a single team. The game is written in Unity with C#, with assets produced in Blender. At the time of writing, the game is unreleased, but after some polishing and additional graphics work, I hope to get the attention of a publisher (or at least release it independently)!</p>
-                <h3>Core Responsibilities</h3>
-                <ul class="project-responsibilities">
-                    <li>Concept and Direction</li>
-                    <li>3D Modeling and Animation</li>
-                    <li>World Design</li>
-                    <li>Network Architecture and Protocol Design</li>
-                </ul>
-            </article>
+                    I started singing in 2015, began playing bass in 2019, and picked up the guitar in 2021. They say that once you've mastered the piano, you can learn any instrument, and that has certainly been true for me. My musical background has provided me with a lifelong passion and career, for which I am incredibly fortunate and grateful. Currently, I am performing in the southern Maine area and actively seeking new opportunities to showcase my talent. <a href="mailto:sean@samarov.me?subject=Performance Inquiry&body=When and where?">Feel free to get in touch with any opportunities or bookings</a>!
+                </p>
+            </section>
+            <section class="section" id="art">
+                <h1>3D Artwork</h1>
+                <p>
+                    The beauty of 3D artwork lies in the combination of logical and abstract creative thinking. A captivating visual concept can manifest in your mind and then be realized through elegant shaders and math.
+                <br><br>
+                tl;dr &dash; Blender is fuckin cool
+                <br><br>
+                </p>
+                <article class="project">
+                    <img src="media/heresy_render3.png" alt="An intensely dystopian scene of a massive skyscraper with an American flag draped down the side, surrounded by a glowing red sea." width="960" height="960">
+                    <h2 class="project-title">The Heresy</h2>
+                    <i class="project-date">Aug 2023</i>
+                    <p class="project-description">An intense scene based on a song of the same name by Mushroomhead (a personal favorite of mine).</p>
+                </article>
+                <article class="project">
+                    <video src="media/ptown_gv003_1080.mp4" type="video/mp4" loop muted autoplay width="960" height="540"></video>
+                    <h2 class="project-title">PTown</h2>
+                    <i class="project-date">Feb 2023</i>
+                    <p class="project-description">A short animation based on a foggy twilight in Provincetown, Massachusetts.</p>
+                </article>
+                <article class="project">
+                    <img src="media/sciencefacility_render3.png" alt="An eery scene of the sillhouette of a man at the end of a dimly lit hallway."  width="960" height="540">
+                    <h2 class="project-title">Science Facility</h2>
+                    <i class="project-date">Jan 2023</i>
+                    <p class="project-description">A scene based on the office at my first job in Maine, where I worked 12-hour overnight shifts in a datacenter.</p>
+                </article>
+                <article class="project">
+                    <img src="media/chess_render1.png" alt="A surreal scene of a chessboard in space with a single piece on one of the squares."  width="960" height="540">
+                    <h2 class="project-title">Chess</h2>
+                    <i class="project-date">Jan 2023</i>
+                    <p class="project-description">One of several concepts for an (at the time of writing) unannounced and unreleased co-op adventure game.</p>
+                </article>
+                <article class="project">
+                    <video src="media/december.mp4" type="video/mp4" loop muted autoplay width="960" height="960"></video>
+                    <h2 class="project-title">December</h2>
+                    <i class="project-date">December 2022</i>
+                    <p class="project-description">A snowy scene created for the album art and Spotify Canvas for my latest single, <a href="https://open.spotify.com/album/6HNoaOjylsL6ERzzPsbwuo" target="_blank" rel="noopener noreferrer">My December</a>.</p>
+                </article>
+                <article class="project">
+                    <img src="media/added_billboard.png" alt="View from a bridge overlooking a forest with a city in the distance." width="960" height="540">
+                    <h2 class="project-title">Outlook</h2>
+                    <i class="project-date">December 2022</i>
+                    <p class="project-description">The first serious work I did in Blender, a S.T.A.L.K.E.R.-inspired scene based on views from the hills around Boston. It's not immediately clear, but the cable on the left side is intended to be a cable used to restrain <a href="https://en.wikipedia.org/wiki/Barrage_balloon" target="_blank" rel="noopener noreferrer">barrage balloons</a> like the ones seen in the distance over the city. An abandoned truck is also barely visible on the hill on the left side.</p>
+                </article>
+            </section>
         </section>
-        <!-- IT WORK -->
-        <section class="section" id="infrastructure">
-            <h1>IT Infrastructure Projects</h1>
-            <article class="project">
-                <h2 class="project-title">New Haven</h2>
-                <span class="project-role">Infrastructure Architect (Freelance)</span>
-                <i class="project-date">Sep 2021 - May 2022</i>
-                <p>A large game server network, complete with an integrated CDN, redundant infrastructure with redundant-er backups and powerful and intuitive management tools. This project was essentially an integration of many different platforms and stacks &dash; AWS for backups and CDN, DigitalOcean for the web backend and management tools, and various bare metal providers for the game servers themselves.</p>
-                <ul class="project-responsibilities">
-                    <li>Infrastructure Planning, Deployment and Maintenance</li>
-                    <li>Linux and Windows Server Administration</li>
-                    <li>Project Management</li>
-                </ul>
-            </article>
-            <article class="project">
-                <h2 class="project-title">Ineptitech Internal Network</h2>
-                <span class="project-role">Freelance</span>
-                <i class="project-date">Sep 2021 - May 2022</i>
-                <p class="project-description">An internal network using Tailscale which connected and provided secure access to all network resources, including our cloud infrastructure, bare metal servers, and my own home lab which was used for testing and staging. It also included network storage, development VMs for all developers</p>
-                <ul class="project-responsibilities">
-                    <li>Infrastructure Planning, Deployment and Maintenance</li>
-                    <li>Project Management</li>
-                </ul>
-            </article>
-        </section>
-        <section class="section" id="music">
-            <h1>Music Stuff</h1>
-            <p>Grew up playing Classical piano. Branched out into bass in 2020, then guitar in 2021. Always loved singing, only started seriously singing in the past 10 years. Released two solo singles and one single with Off By One. Currently a performing musician in Maine.</p>
-            Enumerate releases here
-        </section>
-        <section class="section" id="art">
-            <h1>3D Artwork</h1>
-            <p>The beauty of 3D artwork is in the marriage of logical and abstract creative thought. An incredible visual idea can pop into your head which can be then brought to life using clever shaders and math.
-            <br><br>
-            tl;dr &dash; Blender is fuckin cool
-            <br><br>
-            </p>
-            <article class="project">
-                <img src="media/heresy_render3.png" alt="An intensely dystopian scene of a massive skyscraper with an American flag draped down the side, surrounded by a glowing red sea." width="480" height="480">
-                <h2 class="project-title">The Heresy</h2>
-                <i class="project-date">Aug 2023</i>
-                <p class="project-description">An intense scene based on a song of the same name by Mushroomhead (a personal favorite of mine). If I ever release a cover of the song, some version of this scene will serve as the album cover artwork.</p>
-            </article>
-            <article class="project">
-                <video src="media/ptown_gv003_1080.mp4" type="video/mp4" loop muted autoplay width="480" height="206"></video>
-                <h2 class="project-title">PTown</h2>
-                <i class="project-date">Feb 2023</i>
-                <p class="project-description">A short animation based on a foggy twilight in Provincetown, Massachusetts. Most of the models and some of the materials are my original work, while others are assets provided by <a href="https://polyhaven.com/" target="_blank" rel="noopener noreferrer">Poly Haven</a>.</p>
-            </article>
-            <article class="project">
-                <img src="media/sciencefacility_render3.png" alt="An eery scene of the sillhouette of a man at the end of a dimly lit hallway." width="480" height="270">
-                <h2 class="project-title">Science Facility</h2>
-                <i class="project-date">Jan 2023</i>
-                <p class="project-description">A scene based on the office at my first job in Maine, where I worked 12-hour overnight shifts in a datacenter.</p>
-            </article>
-            <article class="project">
-                <img src="media/chess_render1.png" alt="A surreal scene of a chessboard in space with a single piece on one of the squares." width="480" height="270">
-                <h2 class="project-title">Chess</h2>
-                <i class="project-date">Jan 2023</i>
-                <p class="project-description">One of several concepts for an (at the time of writing) unannounced and unreleased co-op adventure game.</p>
-            </article>
-            <article class="project">
-                <video src="media/december.mp4" type="video/mp4" loop muted autoplay width="480" height="480"></video>
-                <h2 class="project-title">December</h2>
-                <i class="project-date">December 2022</i>
-                <p class="project-description">A snowy scene created for my latest single, My December. Aside from still frames serving as the album cover art, the animation was used as the Spotify Canvas video.</p>
-            </article>
-            <article class="project">
-                <img src="media/added_billboard.png" alt="View from a bridge overlooking a forest with a city in the distance." width="480" height="270">
-                <h2 class="project-title">Outlook</h2>
-                <i class="project-date">December 2022</i>
-                <p class="project-description">The first serious work I did in Blender, a S.T.A.L.K.E.R.-inspired scene based on views from the hills around Boston. It's not immediately clear, but the cable on the left side is intended to be a cable used to restrain <a href="https://en.wikipedia.org/wiki/Barrage_balloon" target="_blank" rel="noopener noreferrer">barrage balloons</a> like the ones seen in the distance over the city. An abandoned truck is also barely visible on the hill on the left side.</p>
-            </article>
-        </section>
-        <section class="section" id="about">
+        <section id="about">
             <h1>wtf is going on here</h1>
             <p>
-                While I am competent with web frameworks like React and they certainly have their place on the web, I've always prided myself on being able to make simple, effective and efficient websites. I have a personal distaste for using a framework or a library just because you can. I don't believe good software is made when you put the solution ahead of the problem. 
-                <br><br>
-                In that spirit, this site is pure HTML and CSS and can run on any device from the past 20 years. It uses less memory and loads faster than the Google homepage. No compromises have been made on SEO or performance for the sake of cool animations. This site also makes full use of semantic HTML, so you won't find a single <code>&lt;div&gt;</code> anywhere in <a href="https://github.com/seansamarov/samarov.me" target="_blank" rel="noopener noreferrer"></a>the source code. You'll also find that the template-like behavior of this site has been achieved with pure CSS (and would function perfectly as raw HTML)!
-                <br><br>
-                I also obsess over responsive design - I encourage the user to resize their browser window on this site however they wish, and try to break the layout. If you do manage to break it, <a href="#contact">leave me a note</a> letting me know so I can fix it.
+                I take pride in creating simple, effective, and efficient websites without relying on frameworks or libraries unless necessary. This site is built using only HTML and CSS, ensuring it can run on any device from the past 20 years. It's designed to use minimal memory and load quickly. I prioritize SEO and performance over flashy animations. Additionally, I use semantic HTML throughout the site and avoid using &lt;div&gt; tags in the source code. The template-like behavior is achieved purely with CSS and the site is designed to be fully responsive. Feel free to resize your browser window and <a href="mailto:sean@samarov.me?subject=HAHA I BROKE YOUR WEBSITE&body=How the issue can be reproduced (attach screenshots if possible):">let me know if you encounter any layout issues</a>.
+            </p>
+            <p class="subtext">
+                Grammarly contributed to this text by responding to these AI prompts:
+
+                Prompts created by Grammarly
+                - "Improve it"
+                - "Shorten it"
             </p>
         </section>
-        <section class="section" id="default">
-            <img src="media/Sean guitar Costell2.jpg" alt="Me performing in downtown Gardiner, ME" width="960" height="960" class="me">
-        </section>
-        <form  id="contact" class="section" method="GET" action="mailto:sean@samarov.me" enctype="text/plain">
-            <fieldset>
-                <legend>
-                    <h2>Let's Chat</h2>
-                </legend>
-                <a href="#" id="form-close">&times;</a>
-                <label for="subject">Subject</label>
-                <input type="text" name="subject" id="subject" placeholder="Howdy! Found you through your website." required>
-                <label for="cc">Your Email</label>
-                <input type="email" name="cc" id="cc" placeholder="Where can I reach you?" required>
-                <label for="body" required>Your message for me</label>
-                <textarea name="body" id="body" cols="60" rows="10" placeholder="What can I do for ya?" required></textarea>
-                <br>
-                <a href="#" id="back-btn">Back</a>
-                <input type="submit">
-            </fieldset>
-        </form>
     </main>
 </body>
 </html>
