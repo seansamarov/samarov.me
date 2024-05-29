@@ -30,73 +30,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <style>
-        /* Adapted from
-        http://meyerweb.com/eric/tools/css/reset/ 
-        v2.0 | 20110126
-        License: none (public domain)
+    
+    <!-- TODO Preload other pages -->
+    <!-- https://stackoverflow.com/a/7830732 -->
+    <!-- TODO Preload Spotify embeds -->
 
-        This CSS goes here to ensure it loads first and reduce layout shift.
-        */
-
-        html, body, div, span, applet, object, iframe,
-        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-        a, abbr, acronym, address, big, cite, code,
-        del, dfn, em, img, ins, kbd, q, s, samp,
-        small, strike, strong, sub, sup, tt, var,
-        b, u, i, center,
-        dl, dt, dd, ol, ul, li,
-        fieldset, form, label, legend,
-        table, caption, tbody, tfoot, thead, tr, th, td,
-        article, aside, canvas, details, embed, 
-        figure, figcaption, footer, header, hgroup, 
-        menu, nav, main, output, ruby, section, summary,
-        time, mark, audio, video {
-            /* In the opinion of this developer,
-             * These are the most important two lines of CSS boilerplate
-            */
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-
-            margin: 0;
-            padding: 0;
-            border: 0;
-            vertical-align: baseline;
-            /* font-size: calc(0.75em + 1vmin); */
-            font-size: clamp(14px, 1vmax, 20px);
-            font-family: "Inter", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-            font-variation-settings:
-                "slnt" 0;
-	        line-height: 135%;
-            line-break: auto;
-        }
-        body {
-            background-color: hsl(240, 4%, 95%);
-        }
-        .project-group {
-            display: none;
-        }
-        .project-group:target-within, .project-group:has(:target) {
-            display: block;
-        }
-        section:target ~ #default {
-            display: none;
-        }
-        /* HTML5 display-role reset for older browsers */
-        article, aside, details, figcaption, figure, 
-        footer, header, hgroup, menu, nav, section {
-            display: block;
-        }
-    </style>
     <link rel="stylesheet" href="./scss/main.scss">
 </head>
 <body>
-    <a id="btt" href="#">&uarr;</a>
     <header>
-        <img src="media/downtown_gardiner.jpg?as=webp&width=960" alt="Me performing in downtown Gardiner, ME" width="960" height="960" class="me">
+        <img src="media/downtown_gardiner.jpg?as=webp&width=960" alt="Me performing in downtown Gardiner, ME" width="960" height="960" id="me">
         <h1>Hi,&nbsp;I'm&nbsp;Sean.</h1>
         <h2>I make cool stuff like:</h2>
         <nav>
@@ -126,95 +69,66 @@
         </nav>
     </header>
     <main>
-        <section class="project-group">
+        <section id="technical">
             <!-- WEB WORK -->
-            <section class="section" id="websites">
+            <section class="projects" id="websites">
                 <h1>Web Dev and Design</h1>
-                <article class="project" id="null.black">
-                    <img src="media/null.png?as=webp&width=960" alt="The homepage of null.black" width="960" height="540">
-                    <h2 class="project-title"><a href="https://null.black" target="_blank" rel="noopener noreferrer">null.black</a></h2>
+                <article class="project" id="nullblack">
+                    <img class="project-logo" src="media/logos/null.png?as=webp&width=960" alt="The logo of null.black" width="960" height="540">
+                    <h2 class="project-title">null.black</h2>
                     <span class="project-role">Web Development and Design Lead</span>
-                    <i class="project-date">Feb 2021 - Oct 2021</i>
-                    <p class="project-description">
-                        A fast-paced, early-stage VPN startup where I was responsible for improving the company's online presence and establishing it as a serious competitor in a crowded market.
-                    </p>
-                    <ul class="project-responsibilities">
-                        <li>UX Research</li>
-                        <li>Wireframing</li>
-                        <li>Prototyping</li>
-                        <li>Web Development</li>
-                        <li>Web Strategy, SEO and Analytics</li>
-                        <li>Design System Maintenance</li>
-                        <li>UX Workshops</li>
-                    </ul>
+                    <small class="project-date">Feb 2021 - Oct 2021</small>
+                    <a class="project-link em" href="case-studies/nullblack.html">Read More &rarr;</a>
                 </article>
                 <article class="project" id="des">
-                    <img src="media/des.png?as=webp&width=960" alt="The homepage of the Dinosaur Earth Society" width="960" height="540">
-                    <h2 class="project-title"><a href="https://dinosaurearthsociety.com" target="_blank" rel="noopener noreferrer">Dinosaur Earth Society</a></h2>
-                    <p>Web Production (Freelance)</p>
-                    <i class="project-date">Feb 2021 - Oct 2021</i>
-                    <p class="project-description">
-                        A satirical social media account evolved into a thriving online business with merchandise and social media integrations, all thanks to a high-performing and quirky website.
-                    </p>
-                    <ul class="project-responsibilities">
-                        <li>Web Development & Design</li>
-                        <li>Social Media Integration</li>
-                        <li>Web Strategy, SEO and Analytics</li>
-                        <li>Project Management</li>
-                    </ul>
+                    <img class="project-logo" src="media/logos/des.jpg?as=webp&width=960" alt="The logo of the Dinosaur Earth Society" width="960" height="540">
+                    <h2 class="project-title">Dinosaur Earth Society</h2>
+                    <span class="project-role">Web Production (Freelance)</span>
+                    <small class="project-date">Feb 2021 - Oct 2021</small>
+                    <!-- <a class="project-link em" href="case-studies/des.html">Read More &rarr;</a> -->
+                </article>
+                <article class="project" id="ineptitech">
+                    <img class="project-logo" src="media/logos/ineptitech.png?as=webp&width=960" alt="Ineptitech Logo" width="960" height="540">
+                    <h2 class="project-title">Ineptitech</h2>
+                    <span class="project-role">Project Lead</span>
+                    <small class="project-date">Jan 2018 - Jan 2022</small>
+                    <!-- <a class="project-link em" href="case-studies/ineptitech.html">Read More &rarr;</a> -->
                 </article>
             </section>
             <!-- GAMES -->
             <section class="section" id="games">
                 <h1>Games</h1>
                 <article class="project">
-                    <img src="media/rps.jpg?as=webp&width=960" alt="A walking pair of scissors, approaching menacingly from down a dark hallway."  width="960" height="540">
-                        <h2 class="project-title">
-                            <a href="https://github.com/Ineptitech/rock-paper-scissors" target="_blank" rel="noopener noreferrer">Rock Paper Scissors</a>
-                        </h2>
-                    <i class="project-date">March 2024 - Ongoing</i>
-                    <p class="project-description">
-                        A demo of a multiplayer tag game (unreleased). It's made in Unity with C# and Blender assets. It uses a decentralized LAN network model where every client is trusted implicitly.
-                    </p>
-                    <ul class="project-responsibilities">
-                        <li>Concept and Direction</li>
-                        <li>3D Modeling and Animation</li>
-                        <li>World Design</li>
-                        <li>Network Architecture and Protocol Design</li>
-                    </ul>
+                    <img class="project-logo" src="media/art/rps.jpg?as=webp&width=960" alt="A walking pair of scissors, approaching menacingly from down a dark hallway." width="960" height="540">
+                        <h2 class="project-title">Rock Paper Scissors</h2>
+                        <span class="project-role">Solo Project</span>
+                    <small class="project-date">March 2024 - Ongoing</small>
+                    <!-- <a class="project-link em" href="case-studies/rps.html">Read More &rarr;</a> -->
                 </article>
             </section>
             <!-- IT WORK -->
-            <section class="section" id="infrastructure">
+            <section class="projects" id="infrastructure">
                 <h1>IT Infrastructure Projects</h1>
                 <article class="project">
+                    <img class="project-logo" src="media/logos/newhaven.webp?as=webp&width=960" alt="New Haven Logo">
                     <h2 class="project-title">New Haven</h2>
                     <span class="project-role">Infrastructure Architect (Freelance)</span>
-                    <i class="project-date">Sep 2021 - May 2022</i>
-                    <p class="project-description">
-                        A large game server network with an integrated CDN and redundant infrastructure, as well as powerful management tools. This involved integrating different platforms and stacks, using AWS for backups and CDN, DigitalOcean for the web backend and management tools, and various bare metal providers for the game servers themselves.
-                    </p>
-                    <ul class="project-responsibilities">
-                        <li>Infrastructure Planning, Deployment and Maintenance</li>
-                        <li>Linux and Windows Server Administration</li>
-                        <li>Project Management</li>
-                    </ul>
+                    <small class="project-date">Sep 2021 - May 2022</small>
                 </article>
                 <article class="project">
+                    <img class="project-logo" src="media/logos/ineptitech.png?as=webp&width=960" alt="Ineptitech Logo" width="960" height="540">
                     <h2 class="project-title">Freelance Internal Network</h2>
                     <span class="project-role">Freelance</span>
-                    <i class="project-date">Sep 2021 - May 2022</i>
-                    <p class="project-description">
-                        An internal network using Tailscale, providing secure access to all network resources, including cloud infrastructure, bare metal servers, and my home lab for testing. It also includes access to network storage and development VMs for my freelance developers.
-                    </p>
-                    <ul class="project-responsibilities">
-                        <li>Infrastructure Planning, Deployment and Maintenance</li>
-                        <li>Project Management</li>
-                    </ul>
+                    <small class="project-date">Sep 2021 - May 2022</small>
                 </article>
+                <!-- <article class="project">
+                    <h2 class="project-title">Scraptops</h2>
+                    <span class="project-role">Project Lead</span>
+                    <small class="project-date">Sep 2021 - May 2022</small>
+                </article> -->
             </section>
         </section>
-        <section class="project-group">
+        <section id="creative">
             <section class="section" id="music">
                 <h1>Music Stuff</h1>
                  <p>
@@ -226,99 +140,48 @@
                     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6cC2Y8yxLPLD4dTCxK1ScB?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1Tit209e3Sp5FcAvo24snd?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/55i5QVLuhfn73n4nhYl5zd?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    <!-- <article class="project">
-                        <img src="media/my_december.jpg?as=webp&width=512" alt="Cover art for My December by Sean Samarov" width="256" height="256">
-                        <h2 class="project-title">
-                            <a href="https://open.spotify.com/track/6cC2Y8yxLPLD4dTCxK1ScB" target="_blank" rel="noopener noreferrer">My December</a>
-                        </h2>
-                        <span class="project-role">Sean Samarov</span>
-                        <i class="project-date">Dec 25, 2022</i>
-                        <p class="project-description">
-                            A cover of a Linkin Park song that takes a lo-fi approach while still maintaining the simple, solemn ballad style.
-                        </p>
-                        <ul class="project-responsibilities">
-                            <li>Vocals</li>
-                            <li>Guitar</li>
-                            <li>Bass Guitar</li>
-                            <li>Arrangement</li>
-                            <li>Production</li>
-                            <li>Mixing/Mastering</li>
-                        </ul>
-                    </article>
-                    <article class="project">
-                        <img src="media/pieces.jpg?as=webp&width=512" alt="A look down the train tracks" width="256" height="256">
-                        <h2 class="project-title">
-                            <a href="https://open.spotify.com/track/1Tit209e3Sp5FcAvo24snd" target="_blank" rel="noopener noreferrer">Pieces</a>
-                        </h2>
-                        <span class="project-role">Off By One</span>
-                        <i class="project-date">Sep 30, 2021</i>
-                        <p class="project-description">
-                            My first release with my former band, Off By One &dash; A cover of the classic ballad by Sum 41 with a comfortable acoustic style. 
-                        </p>
-                        <ul class="project-responsibilities">
-                            <li>Vocals</li>
-                            <li>Bass Guitar</li>
-                            <li>Arrangement</li>
-                        </ul>
-                    </article>
-                    <article class="project">
-                        <img src="media/blackbirds.jpg?as=webp&width=512" alt="A look down the train tracks" width="256" height="256">
-                        <h2 class="project-title">
-                            <a href="https://open.spotify.com/track/55i5QVLuhfn73n4nhYl5zd" target="_blank" rel="noopener noreferrer">Blackbirds</a>
-                        </h2>
-                        <span class="project-role">Sean Samarov</span>
-                        <i class="project-date">Feb 14, 2021</i>
-                        <p class="project-description">
-                            A solemn and introspective cover of a Linkin Park song, using the only two instruments I owned at the time &dash; my piano and bass guitar.
-                        </p>
-                        <ul class="project-responsibilities">
-                            <li>Vocals</li>
-                            <li>Bass Guitar</li>
-                            <li>Arrangement</li>
-                        </ul>
-                    </article> -->
                 </section>
             </section>
-            <section class="section" id="art">
+            <section id="art">
                 <h1>3D Artwork</h1>
                 <p>
                     The beauty of 3D artwork lies in the combination of logical and abstract creative thinking. A captivating visual concept can manifest in your mind and then be realized through elegant shaders and math.
                 <br><br>
-                tl;dr &dash; Blender is fuckin cool
+                tl;dr &dash; Blender is cool
                 <br><br>
                 </p>
                 <article class="project">
-                    <img src="media/heresy_render3.png?as=webp&width=960" alt="An intensely dystopian scene of a massive skyscraper with an American flag draped down the side, surrounded by a glowing red sea." width="960" height="960">
+                    <img src="media/art/heresy_render3.png?as=webp&width=960" alt="An intensely dystopian scene of a massive skyscraper with an American flag draped down the side, surrounded by a glowing red sea." width="960" height="960">
                     <h2 class="project-title">The Heresy</h2>
                     <i class="project-date">Aug 2023</i>
                     <p class="project-description">An intense scene based on a song of the same name by Mushroomhead (a personal favorite of mine).</p>
                 </article>
                 <article class="project">
-                    <video src="media/ptown_gv003_1080.mp4" type="video/mp4" loop muted autoplay width="960" height="540"></video>
+                    <video src="media/art/ptown_gv003_1080.mp4" type="video/mp4" loop muted autoplay width="960" height="540"></video>
                     <h2 class="project-title">PTown</h2>
                     <i class="project-date">Feb 2023</i>
                     <p class="project-description">A short animation based on a foggy twilight in Provincetown, Massachusetts.</p>
                 </article>
                 <article class="project">
-                    <img src="media/sciencefacility_render3.png?as=webp&width=960" alt="An eery scene of the sillhouette of a man at the end of a dimly lit hallway."  width="960" height="540">
+                    <img src="media/art/sciencefacility_render3.png?as=webp&width=960" alt="An eery scene of the sillhouette of a man at the end of a dimly lit hallway."  width="960" height="540">
                     <h2 class="project-title">Science Facility</h2>
                     <i class="project-date">Jan 2023</i>
                     <p class="project-description">A scene based on the office at my first job in Maine, where I worked 12-hour overnight shifts in a datacenter.</p>
                 </article>
                 <article class="project">
-                    <img src="media/chess_render1.png?as=webp&width=960" alt="A surreal scene of a chessboard in space with a single piece on one of the squares."  width="960" height="540">
+                    <img src="media/art/chess_render1.png?as=webp&width=960" alt="A surreal scene of a chessboard in space with a single piece on one of the squares."  width="960" height="540">
                     <h2 class="project-title">Chess</h2>
                     <i class="project-date">Jan 2023</i>
                     <p class="project-description">One of several concepts for an (at the time of writing) unannounced and unreleased co-op adventure game.</p>
                 </article>
                 <article class="project">
-                    <video src="media/december.mp4" type="video/mp4" loop muted autoplay width="960" height="960"></video>
+                    <video src="media/art/december.mp4" type="video/mp4" loop muted autoplay width="960" height="960"></video>
                     <h2 class="project-title">December</h2>
                     <i class="project-date">December 2022</i>
                     <p class="project-description">A snowy scene created for the album art and Spotify Canvas for my latest single, <a href="https://open.spotify.com/album/6HNoaOjylsL6ERzzPsbwuo" target="_blank" rel="noopener noreferrer">My December</a>.</p>
                 </article>
                 <article class="project">
-                    <img src="media/added_billboard.png?as=webp&width=960" alt="View from a bridge overlooking a forest with a city in the distance." width="960" height="540">
+                    <img src="media/art/added_billboard.png?as=webp&width=960" alt="View from a bridge overlooking a forest with a city in the distance." width="960" height="540">
                     <h2 class="project-title">Outlook</h2>
                     <i class="project-date">December 2022</i>
                     <p class="project-description">The first serious work I did in Blender, a S.T.A.L.K.E.R.-inspired scene based on views from the hills around Boston. It's not immediately clear, but the cable on the left side is intended to be a cable used to restrain <a href="https://en.wikipedia.org/wiki/Barrage_balloon" target="_blank" rel="noopener noreferrer">barrage balloons</a> like the ones seen in the distance over the city. An abandoned truck is also barely visible on the hill on the left side.</p>
@@ -328,7 +191,7 @@
         <section id="about">
             <h1>wat</h1>
             <p>
-                I take pride in creating simple, effective, and efficient websites without relying on frameworks or libraries unless necessary. This site is built using only HTML and CSS, ensuring it can run on any device from the past 20 years. It's designed to use minimal memory and load quickly. I prioritize SEO and performance over flashy animations. Additionally, I use semantic HTML throughout the site and avoid using &lt;div&gt; tags in <a href="https://github.com/seansamarov/samarov.me" target="_blank" rel="noopener noreferrer">the source code</a>. The template-like behavior is achieved purely with CSS and the site is designed to be fully responsive. Feel free to resize your browser window and <a href="mailto:sean@samarov.me?subject=HAHA I BROKE YOUR WEBSITE&body=How the issue can be reproduced (attach screenshots if possible):">let me know if you encounter any layout issues</a>.
+                I take pride in creating simple, effective, and efficient websites without relying on frameworks or libraries unless necessary. This site is built using only HTML and CSS, ensuring it can run on any device from the past 20 years. It's designed to use minimal memory and load quickly. I prioritize SEO and performance over flashy animations. Additionally, I use semantic HTML throughout the site and avoid using <code>&lt;div&gt;</code> tags in <a href="https://github.com/seansamarov/samarov.me" target="_blank" rel="noopener noreferrer">the source code</a>. The template-like behavior is achieved purely with CSS and the site is designed to be fully responsive. Feel free to resize your browser window and <a href="mailto:sean@samarov.me?subject=HAHA I BROKE YOUR WEBSITE&body=How the issue can be reproduced (attach screenshots if possible):">let me know if you encounter any layout issues</a>.
             </p>
             <br>
             <p class="subtext">

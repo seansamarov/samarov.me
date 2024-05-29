@@ -1,41 +1,100 @@
 $text: hsla(230, 100%, 10%, 0.8);
 $supertext: hsla(230, 100%, 30%, 0.9);
 $subtext: hsla(230, 100%, 10%, 0.7);
+
 $white-overlay: hsla(0, 0%, 100%, 80%);
 $shadow: hsla(0, 0%, 0%, 25%);
+
+$accent: #8E94F2;
+
+/* Adapted from
+http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+
+This CSS goes here to ensure it loads first and reduce layout shift.
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, main, output, ruby, section, summary,
+time, mark, audio, video {
+    /* In the opinion of this developer,
+        * These are the most important two lines of CSS boilerplate
+    */
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    /* font-size: calc(0.75em + 1vmin); */
+    font-size: clamp(14px, 1vmax, 20px);
+    line-height: 135%;
+
+    /* Wierd Google font magic */
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0;
+    line-break: auto;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/* End Reset */
+
+/* Utility & Base Styles */
+
 html,body {
-    height: 100%;
     color: $text;
+    height: 100%;
 }
-header, main {
-    padding: 5vw;
-}
-header {
-    min-height: 70vh;
-}
-nav > ul {
-    margin: 1ch 0;
+body {
+    background-color: hsl(240, 4%, 95%);
 }
 h1, h2, h3, h4, h5, h6 {
-    line-height: 1em;
+    line-height: 2em;
     font-weight: 600;
+    vertical-align: baseline;
 }
-h1 { font-size: 2.5rem; line-height: 2em; }
-h2 { font-size: 1.75rem; margin-bottom: 0.5ch; }
-h3 { font-size: 1.25rem; }
-
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.5rem; }
+small {
+    color: $subtext;
+    font-size: 0.8rem;
+}
+em, .em {
+    color: $supertext;
+    font-size: 1.1em;
+}
 a {
     // So that links in h1-6 tags still look like h1-6 tags
     font: inherit;
 }
-
-a:link,
-em, .em {
+a:link {
     color: $supertext;
 }
 a:local-link {}
 a:visited {}
 a:active {}
+
 
 ul {
     overflow: hidden; // Hack to get list-items to respect floated image
@@ -49,11 +108,91 @@ ul {
     }
 }
 
+
+header, main {
+    padding: 5vw;
+}
+header {
+    min-height: 70vh;
+}
+nav > ul {
+    margin: 1ch 0;
+}
 section, .section {
     margin-bottom: 3vh;
 }
 
-.me {
+
+/** 
+ *
+ * Project Cards go here
+ *
+**/
+#technical .projects {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+
+    h1 {
+        flex-basis: 100%;
+    }
+}
+
+#technical .project {
+    position: relative;
+
+    min-width: 20rem;
+    width: fit-content;
+    max-width: 100%;
+
+    min-height: 10rem;
+
+    padding: 1rem 1.5rem;
+    border: 1px solid $shadow;
+
+    .project-role,
+    .project-date {
+        display: block;
+    }
+    .project-logo {
+        position: absolute;
+        z-index: -1;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        opacity: 0;
+        transition: opacity 0.25s ease-in-out;
+        margin-right: 1ch;
+        object-fit: cover;
+    } 
+    .project-link {
+        line-height: 250%;
+    }
+    @media (hover: hover) {
+        &:hover {
+            .project-logo {
+                opacity: 0.2;
+            }
+        }
+    }
+    @media screen and (max-width: 900px) {
+        width: 100%;
+    }
+}
+
+/* 
+    Specialty Classes
+*/
+.releases {
+    margin-top: 1em;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1em;
+    & > * {
+        flex: 1;
+        flex-basis: 360px;
+    }
+}
+#me {
     max-width: 100%;
     max-height: 50vh;
     width: auto;
@@ -64,64 +203,7 @@ section, .section {
     mix-blend-mode: luminosity;
     opacity: 0.25;
     order: 0;
-}
-
-#btt {
-    position: fixed;
-    bottom: 1ch;
-    right: 1ch;
-
-    padding: 2rem;
-    border-radius: 50%;
-    background-color: $white-overlay;
-
-    text-decoration: none;
-    color: inherit;
-
-    @media screen and (min-width: 1200px) and (orientation: landscape) {
-        transition: scale 0.25s ease-in-out;
-    }
-
-    &:hover {
-        scale: 110%;
-    }
-}
-.project {
-    border: 1px solid hsla(0, 0%, 0%, 20%);
-    padding: 2rem; 
-
-    overflow: auto;
-    margin-bottom: 1em;
-    img, video, object {
-        float: left;
-        clear: both;
-        max-width: 100%;
-        height: auto;
-        max-height: 60vh;
-        margin-right: 1em;
-        margin-bottom: 1em;
-        object-fit: cover;
-    }
-}
-.project-date, .subtext {
-    display: inline-block;
-    color: $subtext;
-    font-size: 1rem;
-}
-.project-role {
-    display: block;
-}
-.project-description {
-    margin: 0.5ch 0;
-}
-
-.releases {
-    margin-top: 1em;
-    display: flex;
-    flex-flow: row wrap;
-    gap: 1em;
-    & > * {
-        flex: 1;
-        flex-basis: 360px;
+    @media only screen and (max-width: 1280px) {
+        display: none;
     }
 }
