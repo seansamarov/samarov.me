@@ -1,4 +1,0 @@
-wtf is going on here
-====================
-
-I take pride in creating simple, effective, and efficient websites without relying on frameworks or libraries unless necessary. This site is built using only HTML and CSS, ensuring it can run on any device from the past 20 years. It's designed to use minimal memory and load quickly. I prioritize SEO and performance over flashy animations. Additionally, I use semantic HTML throughout the site and avoid using <div> tags in the source code. The template-like behavior is achieved purely with CSS and the site is designed to be fully responsive. Feel free to resize your browser window and let me know if you encounter any layout issues. 
