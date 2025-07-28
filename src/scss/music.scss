@@ -14,16 +14,17 @@ body {
     height: auto;
     object-fit: contain;
     object-position: left top;
+    mask-image: linear-gradient(to bottom, hsla(0,0%,0%,0%) 0%, hsla(0,0%,0%,100%) 10%, hsla(0,0%,0%,100%) 90%, hsla(0,0%,0%,0%) 100%);
   }
 
 }
 
-h1 {
-  .pre-text {
-    display: block;
-  }
-  .main-text {
-    position: relative;
-    left: -6px;
+.release-list {
+  flex-flow: wrap;
+  gap: 1em;
+  margin-top: 1em;
+  display: flex;
+  & > iframe {
+    flex: 360px;
   }
 }
