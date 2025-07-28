@@ -1,0 +1,163 @@
+/*
+ * Defaults for the website. This file is included on every page, following the reset.
+ * Provides utility classes as well for reuse
+ */
+$padding: 0 10vmin;
+$darken: hsla(0, 0%, 0%, 0.33);
+
+:root {
+  font-size: calc(8px + 2vmin);
+
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+body {
+  color: white;
+  height: auto;
+  padding: $padding;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin-bottom: 0.5ch;
+}
+h1 {
+   font-size: 4rem;
+   font-weight: 100;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+h4 {}
+h5 {}
+h6 {}
+
+.pre-text {
+  font-size: 0.2em;
+}
+
+//region Header and Navigation
+header {
+  width: 100%;
+  min-height: calc(100vh - 4rem);
+  padding: 20vmin 0;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: left;
+  align-items: flex-start;
+}
+
+.nav-top {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 6rem;
+  padding: $padding;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 10;
+}
+.nav-link {
+  height: 100%;
+  line-height: 6rem;
+
+  color: white;
+  text-decoration-color: rgba(255, 255, 255, 0.33);
+  font-size: 1.25rem;
+  text-align: center;
+  transition: color 0.25s;
+
+  &:hover {
+    color: cornflowerblue;
+  }
+}
+.down-arrow {
+  display: none;
+}
+
+@media (max-width: 1080px) {
+  .nav-top  {
+    position: static;
+    width: auto;
+    height: auto;
+
+    padding: 2em 0 0 0;
+
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items:  flex-start;
+  }
+  .nav-link {
+    line-height: 3rem;
+    transition: none;
+  }
+  .down-arrow {
+    display: inline;
+    font-size: 4rem;
+  }
+}
+//endregion
+
+//region Portfolio Items Cards
+.portfolio-section {
+  padding-top: 1rem; // Adds a little room to the top when using targeted links
+}
+.portfolio-item {
+  display: flex;
+  flex-flow: row wrap;
+
+  width: 100%;
+  min-height: 33vh;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border: 1px solid white;
+
+  background-color: $darken;
+
+  &--info {
+    flex: 1;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    padding-right: 2rem;
+
+    border-right: 1px solid white;
+    text-align: right;
+
+  }
+  &--description {
+    flex: 2;
+    flex-basis: 512px;
+    padding-left: 2rem;
+  }
+  @media (max-width: 1080px) {
+    & {
+      align-items: flex-start;
+    }
+    &--info {
+      flex-basis: 512px; // This forces the breakpoint by artificially expanding the element, thereby forcing it to wrap the content.
+      // This is preferable to changing the flex direction and having to rewrite all of the aligns and justify's, which in the opinion of this developer, negates the entire fucking point of flex;
+
+      display: block;
+      text-align: left;
+      border: none;
+      margin-bottom: 1rem;
+    }
+    &--description {
+      padding: 0;
+    }
+  }
+}
+//endregion

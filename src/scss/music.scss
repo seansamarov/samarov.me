@@ -1,0 +1,29 @@
+body {
+  background: black;
+}
+.background {
+  position: absolute;
+  top: 0;  left: 0;
+  width: 100vw; height: auto;
+
+  z-index: -99;
+  opacity: 0.5;
+
+  &-item {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: left top;
+  }
+
+}
+
+h1 {
+  .pre-text {
+    display: block;
+  }
+  .main-text {
+    position: relative;
+    left: -6px;
+  }
+}

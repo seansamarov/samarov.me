@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^7.0.4"
+    "sass": "^1.89.2",
+    "vite": "^7.0.4",
+    "vite-plugin-html": "^3.2.2",
+    "vite-plugin-stylelint": "^6.0.2"
   }
 }
