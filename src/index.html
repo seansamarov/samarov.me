@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <link rel="prefetch" href="/src/music.htmlhtml">
+    <link rel="prefetch" href="/src/music.html">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,34 +39,115 @@
     </header>
     <main>
         <h2>Projects</h2>
-        <section id="portfolio">
-
-<!--            <article class="project">-->
-<!--                <img src="" alt="" class="project-preview">-->
-<!--                <h3 class="project-title"></h3>-->
-<!--                <p class="project-description"></p>-->
-<!--                <ul class="project-points">-->
-<!--                    <li></li>-->
-<!--                    <li></li>-->
-<!--                    <li></li>-->
-<!--                </ul>-->
-<!--            </article>-->
-                <article class="project" data-project-tags="design frontend">
-                    <img src="/Render7.png" alt="" class="project-preview" width="768" height="432">
-                    <h3 class="project-title">null.black Redesign</h3>
-                    <p class="project-description">A fast-paced, early-stage VPN startup where I was responsible for improving the company's online presence and establishing it as a serious competitor in a crowded market.
-                        <a href="/blog/">Read More about null.black</a>
+        <section id="portfolio" class="scroll-snap-parent">
+            <!--            <article class="project">-->
+            <!--                <img src="" alt="" class="project-preview">-->
+            <!--                <h3 class="project-title"></h3>-->
+            <!--                <p class="project-description"></p>-->
+            <!--                <ul class="project-points">-->
+            <!--                    <li></li>-->
+            <!--                    <li></li>-->
+            <!--                    <li></li>-->
+            <!--                </ul>-->
+            <!--            </article>-->
+            <!--
+            null
+            rps
+            ineptitech
+            des
+            gaia
+            new haven
+            home lab
+            the archive
+            5v5? can i find video?
+            -->
+            <article id="nullblack" class="project scroll-snap-target" data-project-tags="design frontend ux seo">
+                <img src="/null_fullpage.png?as=webp&width=960" alt="The redesigned null.black home page" class="project-preview" width="3840" height="4223">
+                <aside class="project-info">
+                    <a href="https://null.black" target="_blank" class="project-title">
+                        <h3>null.black Redesign</h3>
+                    </a>
+                    <small class="project-date small">Feb 2021 - Oct 2021</small>
+                    <p class="project-description">
+                        A fast-paced, early-stage VPN startup where I was responsible for improving the company's online presence and establishing it as a serious competitor in a crowded market.
                     </p>
-                    <hr />
                     <ul class="project-points small">
                         <li>UX Research, Workshops, and Interviews</li>
                         <li>Design System Creation, Coordination, and Maintenance</li>
-                        <li>Web Frontend Design and Development (React)</li>
+                        <li>SEO, Web Frontend Design and Development (React)</li>
                     </ul>
-                </article>
+                </aside>
+            </article>
+            <article id="ineptitech" class="project scroll-snap-target" data-project-tags="design frontend ux seo">
+                <img src="/ineptitech_fullpage.png?as=webp&width=960" alt="The redesigned null.black home page" class="project-preview" width="1920" height="1080">
+                <aside class="project-info">
+                    <a href="https://ineptitech.com" target="_blank" class="project-title">
+                        <h3>Ineptitech</h3>
+                    </a>
+                    <small class="project-date small">Feb 2018 - Oct 2021</small>
+                    <p class="project-description">
+                        My (former) freelance company website. Built to be lightweight, extremely accessible and search-engine-friendly. It was through this company that I built many of my biggest and best projects.
+                    </p>
+                    <ul class="project-points small">
+                        <li>UX Research, Workshops, and Interviews</li>
+                        <li>Design System Creation, Coordination, and Maintenance</li>
+                        <li>SEO, Web Frontend Design and Development (React)</li>
+                    </ul>
+                </aside>
+            </article>
+
+            <article id="des" class="project scroll-snap-target" data-project-tags="design fullstack seo">
+                <img src="/des_fullpage.png?as=webp&width=960" alt="The homepage of the Dinosaur Earth Society" class="project-preview" width="960" height="540">
+                <aside class="project-info">
+                    <a class="project-title" href="https://dinosaurearthsociety.com" target="_blank">
+                        <h3>Dinosaur Earth Society</h3>
+                    </a>
+                    <small class="project-date">2018</small>
+                    <p class="project-description">
+                        A satirical social media account evolved into a thriving online business with merchandise and social media integrations, all thanks to a high-performing and quirky website.
+                    </p>
+                    <ul class="project-points small">
+                        <li>Web Development & Design</li>
+                        <li>Social Media Integration</li>
+                        <li>Web Strategy, SEO and Analytics</li>
+                    </ul>
+                </aside>
+            </article>
+            <article id="rps" class="project scroll-snap-target" data-project-tags="game">
+                <img src="media/rps.jpg?as=webp&width=960" alt="A walking pair of scissors, approaching menacingly from down a dark hallway." class="project-preview" width="960" height="540">
+                <aside class="project-info">
+                    <a class="project-title" href="https://github.com/Ineptitech/rock-paper-scissors" target="_blank" rel="noopener noreferrer">
+                        <h2>Rock Paper Scissors</h2>
+                    </a>
+                    <small class="project-date">March 2024 - Ongoing</small>
+                    <p class="project-description">
+                        A demo of a multiplayer tag game (unreleased). It's made in Unity with C# and Blender assets. It uses a decentralized LAN network model where every client is trusted implicitly.
+                    </p>
+                    <ul class="project-points small">
+                        <li>Concept and Direction</li>
+                        <li>3D Modeling and Animation</li>
+                        <li>Network Architecture and Protocol Design</li>
+                    </ul>
+                </aside>
+            </article>
+            <article class="project scroll-snap-target">
+                <aside class="project-info">
+                    <h3 class="project-title">New Haven</h3>
+                    <small class="project-date">Sep 2021 - May 2022</small>
+                    <p class="project-description">
+                        A large game server network with an integrated CDN and redundant infrastructure, as well as powerful management tools. This involved multi-cloud and bare-metal infrastructure for backups, distribution, and redundancy, and the game servers themselves.
+                    </p>
+                    <ul class="project-points small">
+                        <li>Infrastructure Planning, Deployment and Maintenance</li>
+                        <li>Linux and Windows Server Administration</li>
+                        <li>Project Management</li>
+                    </ul>
+                </aside>
+            </article>
         </section>
     </main>
     <footer>
+        <small>Hey, here's a fun fact: there is <em>ZERO</em> JavaScript on this page. Turns out, you actually don't need giant bloated fRaMeWoRkS for every single project. This page, like most of the websites I build, takes up less memory than the Google homepage, a page famous for being as simple as possible.</small>
       <nav>
         <ul>
           <li><a href="http://">Resume</a></li>

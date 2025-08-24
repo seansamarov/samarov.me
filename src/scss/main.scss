@@ -28,9 +28,10 @@ $background: hsl(256, 100%, 3%);
 body {
   height: auto;
   background-color: $background;
+  padding: 5vmin 10vmin;
 }
-body, header, main, footer {
-  padding: $padding;
+main {
+  padding: 5vmin 0;
 }
 
 //region Headers and Text
@@ -38,7 +39,7 @@ body, header, main, footer {
 h1,h2,h3,h4,h5,h6 {
   line-height: 100%;
   font-weight: 300;
-  margin-bottom: 1ch;
+  margin: 1ch 0;
 }
 h1 {
    font-size: 4rem;
@@ -87,8 +88,8 @@ hr {
 //region Header and Navigation
 header {
   width: 100%;
-  min-height: calc(100vh - 4rem);
-  padding-top: 20vmin;
+  min-height: 88vh;
+  padding: 20vmin $padding $padding;
 
   display: flex;
   flex-flow: column nowrap;
@@ -155,67 +156,70 @@ header {
 }
 //endregion
 //endregion
+//region Scroll Snapping
+.scroll-snap-parent {
+  overflow: scroll;
+  justify-content: space-between;
+  scroll-snap-type: both mandatory;
+  overscroll-behavior-x: contain;
+}
+.scroll-snap-target {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+//endregion
 
 //region Portfolio Items Cards
-
-// STANDARDIZE THIS HOLY FUCKING SHIT
-#portfolio.full-width .project {
-  width: 100%;
-  flex-direction: row;
-  &-title {
-    flex: 1;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding-right: 2rem;
-    border-right: 1px solid white;
-    text-align: right;
-  }
-  &-description {
-    flex: 2;
-    flex-basis: 512px;
-    padding-left: 2rem;
-  }
-  &-preview, hr {
-    display: none;
-  }
-
+#portfolio {
+  height: 80vh;
 }
 .project {
-  height: 33em;
-  width: 512px;
-  max-width: 100%;
+  max-height: 78vh;
+  width: 100%;
   padding: $padding;
-  margin-bottom: 2rem;
+  overflow: scroll;
   @include shadow-box;
 
+  &-info {
+    position: sticky;
+    top: 0;
+  }
+  &-title h3 {
+    margin-top: 0;
+  }
   &-preview {
-    width: 100%;
+    width: 55%;
     height: auto;
+    float: right;
+    margin-left: 2rem;
+    object-fit: cover;
   }
-  &-title {
-    margin: 0.5ch 0;
+  &-date {
+    display: block;
+    margin-bottom: 0.5ch;
   }
+  &-description {
+    grid-area: description;
+    align-self: end;
+  }
+  &-points {
+    grid-area: points;
 
-
-
+    list-style-type: circle;
+    padding-left: 1ch;
+  }
   @media (max-width: 1080px) {
-    & {
-      align-items: flex-start;
+    &-preview {
+      width: 100%;
+      height: 20vh;
+      object-position: top center;
+      float: none;
+      margin: 0;
     }
     &-info {
-      flex-basis: 512px; // This forces the breakpoint by artificially expanding the element, thereby forcing it to wrap the content.
-      // This is preferable to changing the flex direction and having to rewrite all of the aligns and justify's, which in the opinion of this developer, negates the entire fucking point of flex;
-
-      display: block;
-      text-align: left;
-      border: none;
-      margin-bottom: 1rem;
-    }
-    &-description {
-      padding: 0;
+      margin-top: 1ch;
     }
   }
 }
+
 //endregion
