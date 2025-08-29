@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    {{> favicon }}
+    {{> meta }}
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
     <link rel="prefetch" href="/src/music.html">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 
     <link rel="stylesheet" href="scss/reset.scss">
     <link rel="stylesheet" href="scss/main.scss">
@@ -23,17 +23,19 @@
     <header>
       <h1>
         Hi there, I'm Sean.
-        <span class="mini-text">I build very cool shit.</span>
+        <span class="mini-text">
+            I build very cool shit. For example, that isn't a photo in the background. I made it in Blender.
+        </span>
       </h1>
       <nav>
         <ul>
           <li><a href="">Websites</a></li>
           <li><a href="">Video Games</a></li>
           <li><a href="">Infrastructure Systems</a></li>
-          <li><a href="">3D Artwork and Experiences</a></li>
+          <li><a href="">3D Experiences</a></li>
           <li><a href="/src/music.html">Music</a></li>
         </ul>
-        <a href="https://abmt.co/labs/skip">Feeling Stressed?</a>
+<!--        <a href="https://abmt.co/labs/skip">Feeling Stressed?</a>-->
       </nav>
         <button>Hire Me</button>
     </header>
@@ -60,6 +62,8 @@
             home lab
             the archive
             5v5? can i find video?
+            TODO Make the navigation consistent between music and home
+            TODO make the spacing on the fuckin cards better. why does the text look like it's huddled up for warmth
             -->
             <article id="nullblack" class="project scroll-snap-target" data-project-tags="design frontend ux seo">
                 <img src="/null_fullpage.png?as=webp&width=960" alt="The redesigned null.black home page" class="project-preview" width="3840" height="4223">
@@ -114,7 +118,7 @@
                 </aside>
             </article>
             <article id="rps" class="project scroll-snap-target" data-project-tags="game">
-                <img src="media/rps.jpg?as=webp&width=960" alt="A walking pair of scissors, approaching menacingly from down a dark hallway." class="project-preview" width="960" height="540">
+                <img src="/rps.jpg?as=webp&width=960" alt="A walking pair of scissors, approaching menacingly from down a dark hallway." class="project-preview" width="960" height="540">
                 <aside class="project-info">
                     <a class="project-title" href="https://github.com/Ineptitech/rock-paper-scissors" target="_blank" rel="noopener noreferrer">
                         <h2>Rock Paper Scissors</h2>
@@ -122,6 +126,24 @@
                     <small class="project-date">March 2024 - Ongoing</small>
                     <p class="project-description">
                         A demo of a multiplayer tag game (unreleased). It's made in Unity with C# and Blender assets. It uses a decentralized LAN network model where every client is trusted implicitly.
+                    </p>
+                    <ul class="project-points small">
+                        <li>Concept and Direction</li>
+                        <li>3D Modeling and Animation</li>
+                        <li>Network Architecture and Protocol Design</li>
+                    </ul>
+                </aside>
+            </article>
+            <article id="ptown" class="project scroll-snap-target" data-project-tags="3D">
+<!--                <object src="../public/ptown_gv003_1080.mp4?width=960" alt="A peaceful scene on a beach with a car approaching down a jetty" class="project-preview" width="960" height="540">-->
+                <video class="project-preview" src="/ptown_gv003_1080.mp4" width="960" autoplay loop></video>
+                <aside class="project-info">
+                    <a class="project-title" href="https://github.com/Ineptitech/rock-paper-scissors" target="_blank" rel="noopener noreferrer">
+                        <h2>PTown</h2>
+                    </a>
+                    <small class="project-date">Ongoing</small>
+                    <p class="project-description">
+                        A 3D scene and WIP virtual web experience based on a foggy night I spent on a beach in Provincetown, Massachusetts.
                     </p>
                     <ul class="project-points small">
                         <li>Concept and Direction</li>
@@ -147,16 +169,20 @@
         </section>
     </main>
     <footer>
-        <small>Hey, here's a fun fact: there is <em>ZERO</em> JavaScript on this page. Turns out, you actually don't need giant bloated fRaMeWoRkS for every single project. This page, like most of the websites I build, takes up less memory than the Google homepage, a page famous for being as simple as possible.</small>
-      <nav>
-        <ul>
-          <li><a href="http://">Resume</a></li>
-          <li><a href="mailto:">Contact</a></li>
-          <li><a href="http://"></a></li>
-          <li><a href="http://"></a></li>
-          <li><a href="http://"></a></li>
-        </ul>
-      </nav>
+        <small>
+            Hey, here's a fun fact: there is <em>ZERO</em> JavaScript on this page. Turns out, you actually don't need giant bloated fRaMeWoRkS for every single project. This page, like most of the websites I build, takes up less memory than the Google homepage, a page famous for being as simple as possible.
+            <br>
+            &copy; 2025 Sean Samarov
+        </small>
+<!--      <nav>-->
+<!--        <ul>-->
+<!--          <li><a href="http://">Resume</a></li>-->
+<!--          <li><a href="mailto:">Contact</a></li>-->
+<!--          <li><a href="http://"></a></li>-->
+<!--          <li><a href="http://"></a></li>-->
+<!--          <li><a href="http://"></a></li>-->
+<!--        </ul>-->
+<!--      </nav>-->
     </footer>
   </body>
 </html>
