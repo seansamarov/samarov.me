@@ -5,15 +5,14 @@
     {{> favicon }}
     {{> meta }}
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="prefetch" href="/src/music.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 
-    <link rel="stylesheet" href="scss/reset.scss">
-    <link rel="stylesheet" href="scss/main.scss">
-    <link rel="stylesheet" href="scss/index.scss">
+    <link rel="stylesheet" href="src/scss/reset.scss">
+    <link rel="stylesheet" href="src/scss/main.scss">
+    <link rel="stylesheet" href="src/scss/index.scss">
   </head>
   <body>
     <!-- Create a template for a static page that can be templated in at compile time. Use CSS targeting for react-like behavior when navigating. WOrks when targeting children, so a link to "shows" that's on the "music" page will work fine  -->
@@ -29,15 +28,19 @@
       </h1>
       <nav>
         <ul>
-          <li><a href="">Websites</a></li>
-          <li><a href="">Video Games</a></li>
-          <li><a href="">Infrastructure Systems</a></li>
-          <li><a href="">3D Experiences</a></li>
-          <li><a href="/src/music.html">Music</a></li>
+          <li><a href="#">Websites</a></li>
+          <li><a href="#">Video Games</a></li>
+          <li><a href="#">Infrastructure Systems</a></li>
+          <li><a href="#">3D Experiences</a></li>
+          <li><a href="./music.html">Music</a></li>
+            <li>
+                <a href="mailto:sean@samarov.me?subject=Let's Work Together!">
+                    <button>Hire Me</button>
+                </a>
+            </li>
         </ul>
 <!--        <a href="https://abmt.co/labs/skip">Feeling Stressed?</a>-->
       </nav>
-        <button>Hire Me</button>
     </header>
     <main>
         <h2>Projects</h2>
@@ -166,6 +169,30 @@
                     </ul>
                 </aside>
             </article>
+        </section>
+        <h2>Artwork</h2>
+        <section id="art">
+            <article class="project overlay scroll-snap-target">
+                <img src="/rps.jpg?as=webp&width=960" alt="A walking pair of scissors, approaching menacingly from down a dark hallway." class="project-preview" width="960" height="540">
+                <aside class="project-info">
+                    <h3 class="project-title">POV: Scissors</h3>
+                    <small class="project-date">Sep 2021 - May 2022</small>
+                    <p class="project-description">
+                        Rock Paper Scissors
+                    </p>
+                    <ul class="project-points small">
+                        <li>Infrastructure Planning, Deployment and Maintenance</li>
+                        <li>Linux and Windows Server Administration</li>
+                        <li>Project Management</li>
+                    </ul>
+                </aside>
+            </article>
+            <img src="/Beach.png?w=32" alt="">
+            <video src="/ptown_gv003_1080.mp4" autoplay loop></video>
+            <img src="/heresy_render3.png" alt="">
+            <img src="/chess_render1.png" alt="">
+            <img src="/sciencefacility_render3.png" alt="">
+            <video src="/december.mp4" autoplay loop></video>
         </section>
     </main>
     <footer>

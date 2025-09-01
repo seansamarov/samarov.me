@@ -120,12 +120,38 @@ header {
 #portfolio {
   height: 80vh;
 }
+.project.overlay {
+  position: relative;
+  .project-preview {
+    float: none;
+    z-index: -999;
+  }
+  .project-preview,
+  .project-info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .project-info {
+    @include shadow-box;
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  &:hover {
+    .project-info {
+      opacity: 1;
+    }
+  }
+}
 .project {
   max-height: 78vh;
   width: 100%;
   padding: $padding;
   overflow: scroll;
   @include shadow-box;
+
 
   &-info {
     position: sticky;
@@ -140,6 +166,7 @@ header {
     float: right;
     margin-left: 2rem;
     object-fit: cover;
+    box-shadow: hsla(0,0%,0%, 0.33) -8px 8px;
   }
   &-date {
     display: block;
@@ -170,6 +197,7 @@ header {
 }
 
 //endregion
+
 
 
 //region Footer
