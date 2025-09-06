@@ -28,14 +28,14 @@
       </h1>
       <nav>
         <ul>
-          <li><a href="#">Websites</a></li>
-          <li><a href="#">Video Games</a></li>
-          <li><a href="#">Infrastructure Systems</a></li>
-          <li><a href="#">3D Experiences</a></li>
+          <li><a href="#websites">Websites</a></li>
+          <li><a href="#games">Video Games</a></li>
+          <li><a href="#infrastructure">Infrastructure Systems</a></li>
+          <li><a href="#threedee">3D Experiences</a></li>
           <li><a href="./music.html">Music</a></li>
             <li>
                 <a href="mailto:sean@samarov.me?subject=Let's Work Together!">
-                    <button>Hire Me</button>
+                    <button class="shadow-box">Hire Me</button>
                 </a>
             </li>
         </ul>
@@ -44,17 +44,25 @@
     </header>
     <main>
         <h2>Projects</h2>
+        <nav id="project-filters">
+            <a href="#design">UI Design</a>
+            <a href="#ux">UX Design</a>
+            <a href="#frontend">Frontend Dev</a>
+            <a href="#fullstack">Full-Stack Dev</a>
+            <a href="#seo">Technical SEO</a>
+            <a href="#threedee">3D Experiences</a>
+        </nav>
         <section id="portfolio" class="scroll-snap-parent">
-            <!--            <article class="project">-->
-            <!--                <img src="" alt="" class="project-preview">-->
-            <!--                <h3 class="project-title"></h3>-->
-            <!--                <p class="project-description"></p>-->
-            <!--                <ul class="project-points">-->
-            <!--                    <li></li>-->
-            <!--                    <li></li>-->
-            <!--                    <li></li>-->
-            <!--                </ul>-->
-            <!--            </article>-->
+            <div class="project-selector" id="games"></div>
+            <div class="project-selector" id="websites"></div>
+            <div class="project-selector" id="infrastructure"></div>
+            <!-- granular search -->
+            <div class="project-selector" id="design"></div>
+            <div class="project-selector" id="frontend"></div>
+            <div class="project-selector" id="fullstack"></div>
+            <div class="project-selector" id="ux"></div>
+            <div class="project-selector" id="seo"></div>
+            <div class="project-selector" id="threedee"></div>
             <!--
             null
             rps
@@ -68,7 +76,7 @@
             TODO Make the navigation consistent between music and home
             TODO make the spacing on the fuckin cards better. why does the text look like it's huddled up for warmth
             -->
-            <article id="nullblack" class="project scroll-snap-target" data-project-tags="design frontend ux seo">
+            <article id="nullblack" class="project shadow-box scroll-snap-target" data-project-tags="website design frontend ux seo">
                 <img src="/null_fullpage.png?as=webp&width=960" alt="The redesigned null.black home page" class="project-preview" width="3840" height="4223">
                 <aside class="project-info">
                     <a href="https://null.black" target="_blank" class="project-title">
@@ -85,7 +93,7 @@
                     </ul>
                 </aside>
             </article>
-            <article id="ineptitech" class="project scroll-snap-target" data-project-tags="design frontend ux seo">
+            <article id="ineptitech" class="project shadow-box scroll-snap-target" data-project-tags="website design frontend ux seo">
                 <img src="/ineptitech_fullpage.png?as=webp&width=960" alt="The redesigned null.black home page" class="project-preview" width="1920" height="1080">
                 <aside class="project-info">
                     <a href="https://ineptitech.com" target="_blank" class="project-title">
@@ -102,8 +110,24 @@
                     </ul>
                 </aside>
             </article>
-
-            <article id="des" class="project scroll-snap-target" data-project-tags="design fullstack seo">
+            <article id="gaia" class="project shadow-box scroll-snap-target" data-project-tags="website design fullstack 3D seo">
+                <img src="/gaia3d.png?as=webp&width=960" alt="The homepage of the Dinosaur Earth Society" class="project-preview" width="960" height="540">
+                <aside class="project-info">
+                    <a class="project-title" href="https://motherearthcomics.com" target="_blank">
+                        <h3>Gaia Comics</h3>
+                    </a>
+                    <small class="project-date">2020</small>
+                    <p class="project-description">
+                        A whimsical web presence for comic artist and social media influencer Gaia Comics (retired). This included a character builder based on their drawings.
+                    </p>
+                    <ul class="project-points small">
+                        <li>Web Development & Design</li>
+                        <li>Social Media Integration</li>
+                        <li>Web Strategy, SEO and Analytics</li>
+                    </ul>
+                </aside>
+            </article>
+            <article id="des" class="project shadow-box scroll-snap-target" data-project-tags="website design fullstack 3D seo">
                 <img src="/des_fullpage.png?as=webp&width=960" alt="The homepage of the Dinosaur Earth Society" class="project-preview" width="960" height="540">
                 <aside class="project-info">
                     <a class="project-title" href="https://dinosaurearthsociety.com" target="_blank">
@@ -120,7 +144,7 @@
                     </ul>
                 </aside>
             </article>
-            <article id="rps" class="project scroll-snap-target" data-project-tags="game">
+            <article id="rps" class="project shadow-box scroll-snap-target" data-project-tags="game 3D">
                 <img src="/rps.jpg?as=webp&width=960" alt="A walking pair of scissors, approaching menacingly from down a dark hallway." class="project-preview" width="960" height="540">
                 <aside class="project-info">
                     <a class="project-title" href="https://github.com/Ineptitech/rock-paper-scissors" target="_blank" rel="noopener noreferrer">
@@ -137,9 +161,9 @@
                     </ul>
                 </aside>
             </article>
-            <article id="ptown" class="project scroll-snap-target" data-project-tags="3D">
+            <article id="ptown" class="project shadow-box scroll-snap-target" data-project-tags="3D">
 <!--                <object src="../public/ptown_gv003_1080.mp4?width=960" alt="A peaceful scene on a beach with a car approaching down a jetty" class="project-preview" width="960" height="540">-->
-                <video class="project-preview" src="/ptown_gv003_1080.mp4" width="960" autoplay loop></video>
+                <video class="project-preview" src="/ptown_gv003_1080.mp4?w=960" width="960" autoplay loop></video>
                 <aside class="project-info">
                     <a class="project-title" href="https://github.com/Ineptitech/rock-paper-scissors" target="_blank" rel="noopener noreferrer">
                         <h2>PTown</h2>
@@ -155,7 +179,7 @@
                     </ul>
                 </aside>
             </article>
-            <article class="project scroll-snap-target">
+            <article id="new-haven" class="project shadow-box scroll-snap-target" data-project-tags="infrastructure">
                 <aside class="project-info">
                     <h3 class="project-title">New Haven</h3>
                     <small class="project-date">Sep 2021 - May 2022</small>
@@ -169,16 +193,12 @@
                     </ul>
                 </aside>
             </article>
-        </section>
-        <h2>Artwork</h2>
-        <section id="art">
-            <article class="project overlay scroll-snap-target">
-                <img src="/rps.jpg?as=webp&width=960" alt="A walking pair of scissors, approaching menacingly from down a dark hallway." class="project-preview" width="960" height="540">
+            <article id="the-archive" class="project shadow-box scroll-snap-target" data-project-tags="infrastructure">
                 <aside class="project-info">
-                    <h3 class="project-title">POV: Scissors</h3>
-                    <small class="project-date">Sep 2021 - May 2022</small>
+                    <h3 class="project-title">The Archive</h3>
+                    <small class="project-date">2019</small>
                     <p class="project-description">
-                        Rock Paper Scissors
+                        In-house game server network owned and operated by Ineptitech. Dozens of game servers with integrated, inter-server points system.
                     </p>
                     <ul class="project-points small">
                         <li>Infrastructure Planning, Deployment and Maintenance</li>
@@ -187,17 +207,128 @@
                     </ul>
                 </aside>
             </article>
-            <img src="/Beach.png?w=32" alt="">
-            <video src="/ptown_gv003_1080.mp4" autoplay loop></video>
-            <img src="/heresy_render3.png" alt="">
-            <img src="/chess_render1.png" alt="">
-            <img src="/sciencefacility_render3.png" alt="">
-            <video src="/december.mp4" autoplay loop></video>
+        </section>
+        <h2>Artwork</h2>
+        <section id="art">
+            <a href="#art" class="back">&times;</a>
+            <article class="project overlay scroll-snap-target">
+                <img src="/rps.jpg?as=webp&width=960" alt="A walking pair of scissors, approaching menacingly from down a dark hallway." class="project-preview" width="960" height="540">
+                <aside class="project-info shadow-box">
+                    <h3 class="project-title">POV: Scissors</h3>
+                    <small class="project-date">Sep 2021 - May 2022</small>
+                    <p class="project-description">
+                        Rock Paper Scissors
+                    </p>
+                    <ul class="project-points small">
+                        <li>Blender</li>
+                        <li>Shader programming</li>
+                        <li>3D animation</li>
+                    </ul>
+                </aside>
+            </article>
+            <article class="project overlay scroll-snap-target">
+                <img src="/Beach.png?as=webp&width=960" alt="A walking pair of scissors, approaching menacingly from down a dark hallway." id="beach-art" class="project-preview" width="960" height="540">
+                <aside class="project-info shadow-box">
+                    <h3 class="project-title">Acadian Beach</h3>
+                    <small class="project-date">Sep 2021 - May 2022</small>
+                    <p class="project-description">
+                        Based on photos of the Milky Way taken from Sand Beach in Acadia National Park, Maine.
+                    </p>
+                    <ul class="project-points small">
+                        <li>Blender</li>
+                    </ul>
+                </aside>
+            </article>
+            <article class="project overlay scroll-snap-target">
+                <video
+                    src="/ptown_gv003_1080.mp4"
+                    width="2520"
+                    height="1080"
+                    class="project-preview"
+                    autoplay
+                    loop
+                >
+                    <img src="/ptown_gv003_1080%20-%20frame%20at%200m2s.jpg" width="2520" height="1080" alt="Still frame from Blender animation of a peaceful beach scene">
+                </video>
+                <aside class="project-info shadow-box">
+                    <h3 class="project-title">PTown</h3>
+                    <small class="project-date">2021</small>
+                    <p class="project-description">
+                        Based on a foggy night spent on a beach in Provincetown, Massachusetts.
+                    </p>
+                    <ul class="project-points small">
+                        <li>Blender</li>
+                    </ul>
+                </aside>
+            </article>
+            <article class="project overlay scroll-snap-target">
+                <img src="/heresy_render3.png" alt="A huge tower with an American flag draped down the side, surrounded by destroyed buildings and an ocean of lava" class="project-preview" width="3" height="3">
+                <aside class="project-info shadow-box">
+                    <h3 class="project-title">The Heresy</h3>
+                    <small class="project-date"></small>
+                    <p class="project-description">
+                        A dystopian scene based on The Heresy by Mushroomhead.
+                    </p>
+                    <ul class="project-points small">
+                        <li>Blender</li>
+                    </ul>
+                </aside>
+            </article>
+            <article class="project overlay scroll-snap-target">
+                <img src="/chess_render1.png" alt="A surreal, human-scale chessboard floating in space" class="project-preview" width="" height="">
+                <aside class="project-info shadow-box">
+                    <h3 class="project-title">Chess</h3>
+                    <small class="project-date">2023</small>
+                    <p class="project-description">
+                        A surreal concept scene for an unreleased game
+                    </p>
+                    <ul class="project-points small">
+                        <li>Blender</li>
+                    </ul>
+                </aside>
+            </article>
+            <article class="project overlay scroll-snap-target">
+                <img src="/sciencefacility_render3.png" alt="An ominous figure standing at the end of a dark hallway" class="project-preview" width="" height="">
+                <aside class="project-info shadow-box">
+                    <h3 class="project-title">Science Facility</h3>
+                    <small class="project-date">2023</small>
+                    <p class="project-description">
+                        A spooky scene based on my first job in Maine, where I worked night shifts in a datacenter.
+                    </p>
+                    <ul class="project-points small">
+                        <li>Blender</li>
+                    </ul>
+                </aside>
+            </article>
+            <article class="project overlay scroll-snap-target">
+                <video
+                        src="/december.mp4"
+                        width="1080"
+                        height="1080"
+                        class="project-preview"
+                        autoplay
+                        loop
+                >
+                    <img src="/mydecember_render6.png" width="1080" height="1080" alt="Still frame from Blender animation of a peaceful beach scene">
+                </video>
+                <aside class="project-info shadow-box">
+                    <h3 class="project-title">My December</h3>
+                    <small class="project-date">2022</small>
+                    <p class="project-description">
+                        A dark, yet peaceful scene of a snow-covered grave. This was used as the album art and Spotify video for my 2022 cover of My December by Linkin Park.
+                    </p>
+                    <ul class="project-points small">
+                        <li>Blender</li>
+                    </ul>
+                </aside>
+            </article>
         </section>
     </main>
     <footer>
         <small>
             Hey, here's a fun fact: there is <em>ZERO</em> JavaScript on this page. Turns out, you actually don't need giant bloated fRaMeWoRkS for every single project. This page, like most of the websites I build, takes up less memory than the Google homepage, a page famous for being as simple as possible.
+            <br>
+            Yes, the project filtering is done entirely in CSS. I'm a god damn wizard.
             <br>
             &copy; 2025 Sean Samarov
         </small>
